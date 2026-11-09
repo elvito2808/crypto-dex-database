@@ -59,3 +59,10 @@ Dependency: Phase 4 qualifying DEX inventory.
 - Each critical claim has evidence and retrieval date.
 - Conflicts and unknowns remain explicit.
 - Data is reproducible and resumable from the latest checkpoint.
+
+
+## Phase 1 checkpoint — 2026-11-09
+
+- Research is in progress; first batch contains 4 candidates (4 VERIFIED) across initial Ethereum L2 and non-EVM/modular L1 samples.
+- Evidence and checkpoint files are saved. This does not satisfy Phase 1 acceptance; coverage, separate non-production classifications, deduplication, and review remain outstanding.
+- Resume from `agents/agent_01_chains/handoff.md`.
