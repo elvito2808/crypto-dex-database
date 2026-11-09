@@ -1,3 +1,7 @@
 # VERIFIED public production networks only.
 # One canonical chain name per line; alphabetically sorted.
 # Do not add testnets, devnets, private networks, or deprecated networks.
+Arbitrum One
+Celestia
+Solana
+ZKsync Era
