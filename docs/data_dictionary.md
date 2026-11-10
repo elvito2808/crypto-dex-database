@@ -199,3 +199,15 @@ Each row is one independent provider observation. Do not merge snapshots capture
 - The strict threshold is **> USD 50,000**. USD 50,000 is not eligible.
 - A provider's chain aggregate is never allocated to a DEX protocol without deployment-specific evidence.
 - A dated historical snapshot can compare above the threshold numerically, but it does not establish current eligibility for the main registry.
+
+
+## Agent 04 — DEX technical details
+
+### File: `data/07_dex_technical_details.csv`
+One row per existing deployment. Fields: stable `technical_record_id`; protocol/deployment keys; canonical chain and chain identifier; Native Gas Token, type and validation; contract, factory, router, pool/pair and alternate technical identifiers with independent statuses; official UI and explorer URL with independent statuses; implementation notes; evidence URLs; UTC observation time; overall record status.
+
+### File: `data/08_dex_fee_mechanics.csv`
+Six rows per deployment, keyed by `fee_record_id`. Controlled `fee_type` values: `SWAP_TRADING_FEE`, `LIQUIDITY_PROVIDER_FEE`, `PROTOCOL_FEE`, `AGGREGATOR_FEE`, `NETWORK_GAS_FEE`, `BUILDER_SOLVER_FEE`. Each row captures existence, exact rate/formula, payer, recipient, stage, required/optional/conditional status, fee payment asset, alternative payment assets, deployment/pool variance, source URLs, UTC observation timestamp, validation status and notes. Native Gas Token is not a substitute for DEX Fee Payment Token.
+
+### Agent 04 issue log
+File: `reports/research_reports/agent_04_retrieval_issues.csv`. Fields: `issue_id,dex_id,deployment_id,protocol_name,chain_name,affected_fields,status,source_url_or_location,issue_type,details,impact_on_data_validity,recorded_at_utc,next_action`. `OPEN_DEFERRED_PHASE6` records accepted unresolved evidence gaps for Phase 6; it does not authorize unlimited retries.
