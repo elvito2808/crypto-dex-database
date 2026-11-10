@@ -1,7 +1,7 @@
 # Agent 01 — Handoff
 
 ## Current state
-Batch 3 saved. Overall mission remains IN_PROGRESS and is not complete. Prior records were preserved; five focal records were re-audited and 14 additional candidates were added to the candidate matrix.
+Batch 3 research was saved and subsequently finalized under the finalization order. Agent 01 status is now COMPLETED; no further chain discovery is requested.
 
 ## Latest checkpoint
 - UTC: 2026-11-10T00:06:50Z
@@ -67,7 +67,7 @@ Arbitrum Sepolia (421614), Taiko Hoodi (167013), Mantle Sepolia (5003), OP Sepol
 
 ## Exact resume point
 1. Resolve Mantle architecture discrepancy with an authoritative versioned statement explaining current Mainnet architecture vs archived optimistic-rollup repo.
-2. Retry Blast official docs after the 502 issue; inspect official deployment config and live RPC chain ID; seek first-party gas-token and explorer confirmation.
+2. Blast retrieval failures and remaining evidence gaps are archived for final project review; do not retry the failed sources.
 3. Close provisional evidence gaps in Immutable zkEVM, Sophon, Lens Chain, Cronos zkEVM, Manta Pacific, World Chain and Zora.
 4. Continue expanding systematic candidate discovery across OP Stack, Arbitrum Orbit, ZK Rollups, Validiums/Volitions, and app-specific rollups. Keep the matrix updated and deduplicated.
 5. Only after the L2 candidate matrix has been further expanded and reviewed, move to EVM L1 discovery.
@@ -83,7 +83,7 @@ Arbitrum Sepolia (421614), Taiko Hoodi (167013), Mantle Sepolia (5003), OP Sepol
 - Broader Ethereum L2 universe remains open-ended; no completeness claim.
 
 ## Handoff rule
-Preserve all canonical records and CSV column order. Keep TXT limited to VERIFIED active public production networks. Do not infer fee tokens or current activity from popularity. Record unknowns and conflicts explicitly. Synchronize all eight deliverables at each coherent checkpoint. Overall mission remains IN_PROGRESS.
+Preserve canonical records and CSV column order. Keep TXT limited to VERIFIED active public production networks. Do not infer unknown values. All unresolved Agent 01 cases are archived for final project review. Agent 01 is COMPLETED.
 
 
 ## Permanent retrieval policy and Batch 3 correction (2026-11-10T15:30:00Z)
@@ -94,15 +94,7 @@ Preserve all canonical records and CSV column order. Keep TXT limited to VERIFIE
 - TXT policy: only VERIFIED active public Mainnets. Current count is 18. No testnets, devnets, private/permissioned networks, experimental environments, deprecated networks or uncertain candidates.
 - Reconciled counts: 28 candidates; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; 18 TXT names; 2 retrieval issue rows; 72 source registry entries.
 
-## Exact next steps for Batch 4
-1. Start from this corrected checkpoint; do not repeat failed Blast URL requests.
-2. Resolve Mantle architecture/version discrepancy from already available source records or a genuinely new authoritative source (not a retry of a failed URL).
-3. Investigate the seven PROVISIONAL L2 candidates: Immutable zkEVM, Sophon Mainnet, Lens Chain, Cronos zkEVM, Manta Pacific, World Chain and Zora. For any failed source, log and move on; unknown fields stay UNKNOWN.
-4. Continue broad Ethereum L2 discovery (Arbitrum Orbit, OP Stack, ZK Stack, Validium/Volition and app-specific rollups), keeping candidate matrix and metadata deduplicated.
-5. Verify every TXT line against metadata status and public Mainnet criteria; keep deprecated and uncertain records out.
-6. Reconcile all row counts and statuses across report, progress, handoff and PROJECT_STATUS; commit and re-read repository files only.
-7. Do not declare AGENT-01 complete; other ecosystems and broad candidate coverage remain unfinished. Status stays IN_PROGRESS.
-
+## Historical unresolved details (archived for final project review; no immediate action)
 
 ## FINAL HANDOFF — AGENT-01 COMPLETED (2026-11-10T15:30:00Z)
 
