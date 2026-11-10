@@ -2,76 +2,50 @@
 
 - Project: Crypto DEX Database
 - Repository: https://github.com/elvito2808/crypto-dex-database
-- Status: `IN_PROGRESS`
-- Current phase: Phase 1 — Chain Discovery
-- Active task: `AGENT-01-CHAIN-DISCOVERY`
-- Last checkpoint UTC: 2026-11-10T00:06:50Z
-- Cumulative candidate records: 28; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; 18 VERIFIED names in TXT.
+- Overall status: `IN_PROGRESS`
+- Current phase: Phase 4 — DEX Discovery
+- Next active task: `AGENT-03-DEX-DISCOVERY`
+- Last checkpoint UTC: 2026-11-10T15:50:00Z
+- Canonical production Mainnet scope: 18 networks in `data/01_chains.txt`.
 
-## Completed
-- [x] Batch 1: initial four evidence-backed records saved.
-- [x] Batch 2: re-audited four initial records and added six verified L2 networks.
-- [x] Batch 3: direct evidence closure completed for OP Mainnet and Taiko.
-- [x] Batch 3: Starknet upgraded from MISSING to VERIFIED with current fee-token and runtime evidence.
-- [x] Batch 3: Mantle architecture discrepancy recorded as CONFLICT; excluded from TXT.
-- [x] Batch 3: Blast official documentation attempts and GitHub paths inspected; remains PROVISIONAL.
-- [x] Batch 3: seven additional L2 networks added as VERIFIED.
-- [x] Batch 3: seven additional L2 candidates retained as PROVISIONAL.
-- [x] Candidate matrix created with 28 cumulative candidate rows.
-- [x] All seven required existing outputs plus the new matrix saved and re-read from GitHub.
+## Phase completion
 
-## Cumulative counts
-- Unique candidates: 28
-- Distinct canonical candidates after deduplication: 28
-- VERIFIED: 18
-- PROVISIONAL: 8
-- CONFLICT: 1
-- MISSING: 0
-- DEPRECATED: 1
-- VERIFIED records in TXT: 18
-- Official / first-party / maintained ecosystem registry sources: 60
-- Independent / non-official sources: 11
-- Total source registry entries: 71
+- [x] Phase 0 — Repository bootstrap.
+- [x] Phase 1 — Chain discovery (Agent 01 COMPLETED; 18 VERIFIED public production Mainnets in canonical TXT).
+- [x] Phase 2 — Native and wrapped assets (Agent 02 COMPLETED; 30 asset records).
+- [x] Phase 3 — Stablecoins (Agent 02 COMPLETED; 30 deployment records; native/bridged/unknown separated).
+- [ ] Phase 4 — DEX discovery.
+- [ ] Phase 5 — DEX technical details.
+- [ ] Phase 6 — Verification and integration.
 
-## Key decisions
-1. TXT contains only VERIFIED active public production networks.
-2. Mantle is CONFLICT due to current-vs-archived official architecture discrepancy.
-3. Polygon zkEVM is DEPRECATED after official sequencer sunset on 2026-07-03.
-4. Blast remains PROVISIONAL because first-party docs could not be fetched and critical fields are only independently corroborated.
-5. Taiko and Starknet are now VERIFIED on current official technical documentation.
-6. Starknet's current protocol fee asset is STRK; ETH is recorded as a bridged token, not the current fee token.
-7. Testnets and devnets remain outside the primary TXT.
-8. Frameworks and ecosystems (OP Stack, ZKsync Elastic Network) are not themselves canonical network records.
+## Agent 01 — final status
 
-## In progress
-- [ ] Resolve Mantle architecture conflict.
-- [ ] Close Blast official evidence gap.
-- [ ] Close seven remaining PROVISIONAL L2 candidates.
-- [ ] Expand Ethereum L2 / Rollup candidate coverage and deduplicate further.
-- [ ] Continue Arbitrum Orbit, Validium/Volition and app-specific rollup discovery.
-- [ ] After L2 scope is further expanded, proceed to EVM L1 and remaining ecosystems.
-- [ ] Separately catalogue testnets/devnets, private networks, forks/renames and deprecated networks.
+- Task `AGENT-01-CHAIN-DISCOVERY`: `COMPLETED`.
+- Final candidates: 28; VERIFIED 18, PROVISIONAL 8, CONFLICT 1, MISSING 0, DEPRECATED 1.
+- Active public VERIFIED Mainnets in `data/01_chains.txt`: 18.
+- Source registry at Agent 01 close: 72 entries; candidate matrix: 28 data rows.
+- Agent 01 unresolved cases remain in `reports/research_reports/agent_01_retrieval_issues.csv`. The file was not modified by Agent 02.
+- Blast and Mantle were not researched or retried by Agent 02.
 
-## Next action
-Agent 01 is completed. The next project phase is Native Token, Wrapped Token and Stablecoin discovery for the 18 VERIFIED networks; unresolved chain cases remain archived for final project review.
+## Agent 02 — token discovery
 
+- Task `AGENT-02-TOKEN-DISCOVERY`: closeout in progress pending GitHub read-back.
+- Scope: 18/18 canonical chains.
+- Chain-token CSV: 30 rows; 26 VERIFIED, 4 PROVISIONAL; includes 17 actual native assets, 1 protocol-fee token and 11 wrapped/bridged examples.
+- Stablecoin CSV: 30 rows; 22 VERIFIED, 8 PROVISIONAL; NATIVE 14, BRIDGED 11, UNKNOWN representation 5.
+- Source registry: 90 rows (72 existing + 18 Agent 02 additions).
+- Agent 02 issues: 32 documented evidence/UNKNOWN/inventory items; retrieval errors 0 observed.
+- The inventory is not an exhaustive token-contract census or liquidity audit; limitations are in the report and issue register.
 
-## Batch 3 permanent-policy correction (2026-11-10T15:30:00Z)
-- Main-list rule: 18 VERIFIED active public Mainnets in `data/01_chains.txt`; no test/dev/private/experimental/deprecated/unverified networks.
-- Reconciled candidate counts: 28 total; VERIFIED 18, PROVISIONAL 8, CONFLICT 1, MISSING 0, DEPRECATED 1. Polygon zkEVM remains outside active TXT.
-- Blast remains PROVISIONAL. Canonical chain symbol, chain ID, network identifier, current operational status and official explorer are UNKNOWN where first-party verification is unavailable.
-- Two Blast HTTP 502 retrieval failures are recorded separately in `reports/research_reports/agent_01_retrieval_issues.csv`; no retries are permitted. Mantle remains an evidence CONFLICT, not a retrieval failure.
-- Source registry contains 72 data rows; candidate matrix contains 28 data rows; retrieval issue log contains 2 data rows.
-- Agent 01 is closed; overall project remains `IN_PROGRESS` pending the next token-inventory phase.
+## Next phase — Agent 03 DEX Discovery
 
+- [ ] Discover DEX protocols and distinct deployments on only the 18 canonical networks.
+- [ ] Qualify only 24-hour volume observations strictly greater than USD 50,000.
+- [ ] Record the provider/source, 24-hour volume, UTC observation timestamp, chain and deployment identity.
+- [ ] Keep below-threshold and unverified candidates separately.
 
-## AGENT-01 final status — COMPLETED (2026-11-10T15:30:00Z)
-- Agent task `AGENT-01-CHAIN-DISCOVERY`: `COMPLETED`.
-- Overall project status remains `IN_PROGRESS`; subsequent token-inventory phase is pending.
-- Final chain candidate counts: 28 total; VERIFIED 18; PROVISIONAL 8; CONFLICT 1; MISSING 0; DEPRECATED 1.
-- Active VERIFIED public Mainnets in `data/01_chains.txt`: 18.
-- Source registry: 72 entries; L2 candidate matrix: 28 data rows.
-- Unresolved-case register: `reports/research_reports/agent_01_retrieval_issues.csv`, 14 rows (2 retrieval failures and 12 evidence/field issues).
-- Only VERIFIED public operational Mainnets are in TXT. Provisional/conflict/deprecated records remain excluded.
-- Next phase: identify and register Native Tokens, Wrapped Tokens and Stablecoins for the 18 VERIFIED networks.
-- All unresolved chain cases are reserved for final project review, not immediate next-agent work. No new research or retry was conducted during finalization.
+## Integrity rules
+
+- No testnets, devnets, private networks or off-scope chain candidates.
+- Do not merge same-symbol token contracts without provenance evidence.
+- Keep Agent 01 and Agent 02 issue registers separate.
