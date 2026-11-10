@@ -56,7 +56,7 @@ Each row represents one chain-specific asset deployment or native asset. Ticker 
 |---|---|
 | record_id | Stable unique row ID. |
 | asset_name / symbol | Display name and ticker; neither is an identity key. |
-| asset_category | NATIVE_GAS_ASSET, NATIVE_GAS_AND_STAKING_ASSET, PROTOCOL_FEE_TOKEN, WRAPPED_OR_BRIDGED_ASSET, etc. |
+| asset_category | Controlled vocabulary: NATIVE_GAS_ASSET, NATIVE_GAS_AND_STAKING_ASSET, NATIVE_GAS_AND_MONETARY_ASSET, PROTOCOL_FEE_TOKEN, BRIDGED_ASSET_AND_POTENTIAL_FEE_ASSET, WRAPPED_OR_BRIDGED_ASSET. Meanings are defined below. |
 | chain_name | Must match a canonical chain in `data/01_chains.txt`. |
 | native_or_bridged | NATIVE, BRIDGED, WRAPPED or UNKNOWN. |
 | is_native_chain_asset | TRUE only for the actual native balance asset; FALSE for a contract/mint token. |
@@ -73,6 +73,18 @@ Each row represents one chain-specific asset deployment or native asset. Ticker 
 | last_checked_utc | ISO 8601 UTC timestamp. |
 | notes | Caveats, identity distinctions and provenance limitations. |
 
+
+#### `asset_category` controlled values
+
+| Value | Meaning |
+|---|---|
+| `NATIVE_GAS_ASSET` | Native chain balance asset used to pay transaction/network gas; no token contract is implied. |
+| `NATIVE_GAS_AND_STAKING_ASSET` | Native chain asset used for gas and also for staking, delegation or protocol security. |
+| `NATIVE_GAS_AND_MONETARY_ASSET` | Native chain monetary asset that also serves as the network gas/fee denomination. |
+| `PROTOCOL_FEE_TOKEN` | Contract-backed or protocol-issued token used to pay protocol execution fees; it is not necessarily the chain's native coin. |
+| `BRIDGED_ASSET_AND_POTENTIAL_FEE_ASSET` | Bridged token representation that may be accepted for fees, but current fee eligibility is not conclusively established. |
+| `WRAPPED_OR_BRIDGED_ASSET` | Wrapped, bridged or otherwise represented asset deployed as a token contract/mint, rather than the chain's native balance asset. |
+
 ### File: `data/03_stablecoins.csv`
 
 Stablecoin entries are keyed by chain + contract/mint, not ticker. Record IDs use `SC-<CHAIN_SLUG>-<SYMBOL>-<ROLE>`.
@@ -81,7 +93,7 @@ Stablecoin entries are keyed by chain + contract/mint, not ticker. Record IDs us
 |---|---|
 | record_id | Stable unique row ID. |
 | stablecoin_name / symbol | Display name and ticker; neither is unique. |
-| stablecoin_model | FIAT_BACKED, CRYPTO_BACKED, COMMODITY_BACKED, ALGORITHMIC, TOKENIZED_TREASURY_BACKED, YIELD_BEARING_STABLECOIN_WRAPPER or UNKNOWN. |
+| stablecoin_model | Controlled vocabulary: FIAT_BACKED, FIAT_BACKED_UNDERLYING, FIAT_BACKED_TOKENIZED_TREASURY_BACKED, CRYPTO_BACKED, COMMODITY_BACKED, ALGORITHMIC, TOKENIZED_TREASURY_BACKED, YIELD_BEARING_STABLECOIN_WRAPPER, UNKNOWN. Meanings are defined below. |
 | peg_or_reference | Peg target or reference asset, if evidenced. |
 | issuer | Entity responsible for issuance; UNKNOWN if not established for this deployment. |
 | deployment_chain | Canonical chain from `data/01_chains.txt`. |
@@ -94,6 +106,22 @@ Stablecoin entries are keyed by chain + contract/mint, not ticker. Record IDs us
 | verification_status | VERIFIED, PROVISIONAL, CONFLICT, MISSING or DEPRECATED. |
 | source_urls / last_checked_utc / notes | Direct evidence, UTC audit timestamp and important limitations. |
 
+
+#### `stablecoin_model` controlled values
+
+| Value | Meaning |
+|---|---|
+| `FIAT_BACKED` | Stablecoin issued against fiat currency or cash-equivalent reserves and targeting a fiat peg. |
+| `FIAT_BACKED_UNDERLYING` | Bridged or represented token whose underlying source asset is a fiat-backed stablecoin; the row describes the representation, not a new issuer. |
+| `FIAT_BACKED_TOKENIZED_TREASURY_BACKED` | Fiat-pegged stablecoin backed wholly or partly by tokenized U.S. Treasury instruments or comparable government-debt reserves, as described by its issuer. |
+| `CRYPTO_BACKED` | Stablecoin collateralized by cryptoassets, typically with overcollateralization or liquidation mechanisms. |
+| `COMMODITY_BACKED` | Token whose target value is linked to a commodity such as gold or another physical commodity. |
+| `ALGORITHMIC` | Peg maintained primarily through protocol mechanisms, supply adjustments or market incentives rather than conventional fully reserved collateral. |
+| `TOKENIZED_TREASURY_BACKED` | Token representing or backed by tokenized Treasury securities; use when the Treasury exposure is the defining product and a separate fiat-backed classification is not more precise. |
+| `YIELD_BEARING_STABLECOIN_WRAPPER` | Receipt, vault or savings wrapper that accrues yield on an underlying stablecoin; not a separate reserve-backed stablecoin issuer. |
+| `UNKNOWN` | Available evidence does not establish the stablecoin's backing or mechanism sufficiently for classification. |
+
+The controlled vocabulary is forward-compatible: a value may be defined here before any row uses it. Values actually present in `data/03_stablecoins.csv` must always have an explicit definition.
 ### File: `reports/research_reports/agent_02_retrieval_issues.csv`
 
 Fields: `issue_id,chain_name,asset_or_record,affected_field,source_url_or_location,issue_type,details,recorded_at_utc,impact_on_verification,status`.
