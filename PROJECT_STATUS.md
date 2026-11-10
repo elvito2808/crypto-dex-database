@@ -5,7 +5,7 @@
 - Overall status: `IN_PROGRESS` (Agent 03 completed; Agent 04 is next)
 - Current phase: Phase 5 — DEX Technical Details
 - Next active task: `AGENT-04-DEX-TECHNICAL-DETAILS`
-- Last checkpoint UTC: 2026-11-10T15:50:00Z
+- Last checkpoint UTC: 2026-11-10T17:08:28Z
 - Canonical production Mainnet scope: 18 networks in `data/01_chains.txt`.
 
 ## Phase completion
