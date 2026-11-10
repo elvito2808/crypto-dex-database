@@ -65,3 +65,6 @@ Dependency: Phase 4 qualifying DEX inventory.
 - Conflicts and unknowns remain explicit.
 - Same-symbol assets remain separate unless contract, issuer and provenance evidence match.
 - Output is reproducible and resumable.
+
+
+Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deployments are represented. Unresolved technical and fee evidence gaps are documented in the Agent 04 issue log and deferred to Phase 6; no further rediscovery or retry is part of this phase.
