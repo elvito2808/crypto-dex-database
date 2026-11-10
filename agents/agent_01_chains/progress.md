@@ -84,3 +84,13 @@
 - Seven provisional candidates require current first-party operational and parameter evidence.
 - Next: close those gaps and broaden L2/rollup discovery further; only then begin EVM L1.
 - Overall mission remains IN_PROGRESS.
+
+
+## Permanent policy amendment / Batch 3 correction (2026-11-10T15:30:00Z)
+- Public Mainnet-only TXT policy reaffirmed: 18 VERIFIED active public Mainnets; no testnet/devnet/private/experimental/deprecated or unverified candidates.
+- Corrected Blast canonical unknowns: chain symbol, chain ID, network identifier, current operational Mainnet status and official explorer are UNKNOWN where first-party evidence is absent; status remains PROVISIONAL and it is excluded from TXT.
+- Blast retrieval issues formally logged: 2 HTTP 502 failures in `reports/research_reports/agent_01_retrieval_issues.csv`; no retries performed. Original event timestamps unavailable; logging timestamp is explicitly used.
+- Mantle remains one evidence conflict (CONFLICT), not a retrieval issue.
+- Cumulative reconciled counts: 28 candidates; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; TXT 18; retrieval issues 2; source registry 72 rows.
+- Batch 3 correction files: instructions, TXT header, metadata, source registry, report, candidate matrix, retrieval issue log, progress, handoff, project status.
+- Next: resolve Mantle's versioned architecture contradiction using already available evidence only unless a new distinct source is identified; close seven provisional candidate evidence gaps; continue L2 discovery. Never retry a failed source URL. Overall mission remains IN_PROGRESS.
