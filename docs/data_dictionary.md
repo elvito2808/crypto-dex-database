@@ -211,3 +211,129 @@ Six rows per deployment, keyed by `fee_record_id`. Controlled `fee_type` values:
 
 ### Agent 04 issue log
 File: `reports/research_reports/agent_04_retrieval_issues.csv`. Fields: `issue_id,dex_id,deployment_id,protocol_name,chain_name,affected_fields,status,source_url_or_location,issue_type,details,impact_on_data_validity,recorded_at_utc,next_action`. `OPEN_DEFERRED_PHASE6` records accepted unresolved evidence gaps for Phase 6; it does not authorize unlimited retries.
+
+
+## Agent 05 schema reconciliation — source CSV fields
+
+Audit date: 2026-11-10 UTC. The Agent 05 comparison identified actual CSV fields not previously defined above. These descriptions supplement the source schemas; names and source values are unchanged.
+
+| Field | Meaning |
+|---|---|
+| `asset_name` | Human-readable asset name; identity still depends on network and contract or mint context. |
+| `symbol` | Ticker or symbol as recorded; not a unique identifier. |
+| `origin_chain` | Origin network for a wrapped or bridged representation; UNKNOWN where not established. |
+| `origin_asset` | Origin asset identity or reference ticker/contract, verbatim from source. |
+| `issuer_or_bridge` | Issuer, bridge operator, or bridging protocol associated with the representation. |
+| `bridge_mechanism` | Documented mechanism for the wrapped or bridged representation; UNKNOWN if not sourced. |
+| `stablecoin_name` | Human-readable name of the stablecoin deployment. |
+| `website_url` | Official project or protocol website URL. |
+| `protocol_category` | Protocol-level DEX category or implementation family. |
+| `protocol_description` | Short protocol-identity description, not a chain-specific deployment assertion. |
+| `official_docs_url` | Official protocol documentation entry URL. |
+| `contract_address` | Deployment-specific contract address, where directly supported. |
+| `factory_address` | Factory contract address, where directly supported. |
+| `router_address` | Router contract address, where directly supported. |
+| `ui_url` | Deployment-specific user interface URL. |
+| `explorer_url` | Explorer URL relevant to the chain or DEX deployment. |
+| `volume_24h_original` | 24-hour volume in the provider's original denomination. |
+| `original_currency` | Currency or denomination for volume_24h_original. |
+| `provider` | Analytics provider that supplied the volume observation. |
+| `source_url` | Direct evidence URL for the observation or claim. |
+| `technical_record_id` | Unique Agent 04 technical-detail row identifier. |
+| `chain_id_or_network_identifier` | Network-specific numeric or textual identifier as sourced. |
+| `chain_id_status` | Evidence status for the network identifier. |
+| `native_gas_token` | Native or protocol gas-denomination token; not automatically a DEX fee-payment asset. |
+| `native_gas_token_type` | Classification of the gas token, such as native coin or contract-backed fee token. |
+| `native_gas_token_status` | Evidence status for native_gas_token and its type. |
+| `contract_role` | Role of the recorded contract in the DEX deployment. |
+| `contract_address_status` | Evidence status for contract_address. |
+| `factory_address_status` | Evidence status for factory_address. |
+| `router_address_status` | Evidence status for router_address. |
+| `pool_or_pair_contract` | Pool/pair contract or canonical program/state identifier, if specifically evidenced. |
+| `pool_or_pair_status` | Evidence status for pool_or_pair_contract. |
+| `other_technical_identifiers` | Additional program IDs, managers, core contracts, or related identifiers. |
+| `other_identifiers_status` | Evidence status for other_technical_identifiers. |
+| `ui_url_status` | Evidence status for ui_url. |
+| `explorer_url_status` | Evidence status for explorer_url. |
+| `technical_mechanics` | Relevant technical behavior or deployment mechanics. |
+| `evidence_source_urls` | Semicolon-separated evidence URLs supporting technical details. |
+| `record_status` | Overall technical-row status; does not override field-level statuses. |
+| `fee_record_id` | Unique fee-mechanics row identifier. |
+| `fee_type` | One of the six separate fee categories recorded by Agent 04. |
+| `fee_exists` | Whether evidence establishes this fee category; UNKNOWN is not equivalent to NO. |
+| `rate_or_formula` | Documented rate or calculation formula; UNKNOWN where unsupported. |
+| `payer` | Party economically or mechanically paying the fee, if evidenced. |
+| `recipient` | Fee recipient or beneficiary, if evidenced. |
+| `calculation_or_deduction_stage` | Stage where the fee is calculated, deducted, or settled. |
+| `mandatory_optional_or_conditional` | Whether the fee is general, optional, or conditional. |
+| `fee_payment_asset` | Asset actually used to pay/deduct this fee, if evidenced; distinct from gas token. |
+| `alternative_fee_payment_assets` | Other evidenced fee-payment assets or explicit UNKNOWN. |
+| `deployment_or_pool_variance` | Known deployment, version, or pool variation and caveats. |
+| `validation_status` | Evidence status for the fee-mechanics row. |
+| `source_id` | Stable local identifier in the Source Registry. |
+| `source_name` | Publisher, site, or document label in the Source Registry. |
+| `source_type` | Source category recorded by the research process. |
+| `related_chain` | Chain context for a source, or UNKNOWN if no single chain is assigned. |
+| `access_date_utc` | Recorded UTC time when the source was accessed. |
+| `reliability` | Qualitative source reliability assessment; rationale belongs in notes. |
+| `candidate_id` | Field retained verbatim from its source dataset; preserve UNKNOWN and PROVISIONAL rather than inferring a value. |
+| `candidate_status` | Agent 03 candidate/exclusion classification; not an Agent 05 requalification. |
+| `volume_24h_reported` | Provider-reported 24-hour volume as originally captured. |
+| `volume_as_of` | Provider-stated observation date/time; may not expose exact UTC window boundaries. |
+| `exclusion_reason` | Recorded reason a candidate was not included in the qualified deployment registry. |
+| `issue_id` | Original issue identifier within its originating Agent issue log. |
+| `detected_at_utc` | UTC detection or formal logging time of an Agent 01 issue. |
+| `network_name` | Agent 01 network or candidate name associated with an issue. |
+| `exact_location` | Specific source URL, route, page, or location where an issue occurred. |
+| `error_type` | Agent 01 retrieval or evidence issue category. |
+| `http_status` | Recorded HTTP status for a failed request; blank where not applicable. |
+| `error_description` | Recorded retrieval or evidence failure details. |
+| `affected_fields` | Fields impacted by the issue. |
+| `impact_on_verification` | How the issue limits verification. |
+| `action_taken` | Action documented by the originating Agent. |
+| `asset_or_record` | Agent 02 asset or record label associated with an issue. |
+| `affected_field` | Single Agent 02 field affected, where identified. |
+| `source_url_or_location` | Source URL or descriptive source location associated with an issue. |
+| `issue_type` | Original issue classification; preserve the exact source label. |
+| `details` | Original issue details, including uncertainty and evidence limitations. |
+| `recorded_at_utc` | UTC timestamp when the originating Agent issue was recorded. |
+| `error_details` | Agent 03 recorded retrieval, volume, or deployment issue details. |
+| `protocol_name` | Agent 04 protocol label associated with a technical or fee issue. |
+| `impact_on_data_validity` | Agent 04 explanation of the issue's effect on data validity. |
+| `next_action` | Agent 04 handoff note; not authority for out-of-scope rediscovery. |
+
+## Agent 05 integrated export
+
+File: `data/final_crypto_dex_database.csv`. One row represents one preserved source record. CHAIN rows contain only the 18 VERIFIED names from `data/01_chains.txt`; excluded chain candidates remain in their Agent 01 source files.
+
+| Field | Meaning |
+|---|---|
+| `record_type` | Entity or issue type in the integrated export. |
+| `record_id` | Deterministic type-prefixed export key; original primary key remains separately available. |
+| `source_file` | Repository path of the original source record. |
+| `chain_name` | Canonical chain name associated with the row, where applicable. |
+| `chain_record_id` | Deterministic `CHAIN:<name>` key for a canonical network. |
+| `token_id` | Original chain-token record ID. |
+| `stablecoin_record_id` | Original stablecoin record ID. |
+| `dex_id` | Original DEX protocol identity ID. |
+| `deployment_id` | Original DEX deployment or candidate deployment reference. |
+| `snapshot_id` | Original volume snapshot ID. |
+| `candidate_id` | Original Agent 03 candidate ID. |
+| `technical_record_id` | Original Agent 04 technical-detail ID. |
+| `fee_record_id` | Original Agent 04 fee-record ID. |
+| `source_id` | Original Source Registry ID. |
+| `issue_origin` | Originating Agent issue log. |
+| `issue_id` | Original issue ID within its origin. |
+| `source_urls` | Original evidence URL string; multiple URLs remain semicolon-separated. |
+| `source_ids` | Exact URL matches to Source Registry IDs; duplicate exact matches retain all IDs. |
+| `source_link_status` | URL-to-registry mapping outcome; not an HTTP reachability test. |
+| `original_status` | Original status/classification from the source record. |
+| `consolidated_status` | Agent 05 disposition; retained issues use `OPEN_DEFERRED_FINAL`. |
+| `observed_at_utc` | Original observation/access/check timestamp when present. |
+| `volume_24h_usd` | Original 24-hour USD volume value, where present. |
+| `fee_type` | Original fee category, where applicable. |
+| `payload_json` | JSON object with the complete original source row, retaining its columns and values. |
+
+## Agent 05 consolidated issue export
+
+File: `reports/research_reports/agent_05_consolidated_issues.csv`. The export retains origin, source issue ID, source file, original issue fields, original status, and complete `payload_json`. Every unresolved issue is assigned `OPEN_DEFERRED_FINAL`; completion of Phase 6 does not mean issue resolution.
