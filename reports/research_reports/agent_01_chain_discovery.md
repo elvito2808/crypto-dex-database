@@ -181,3 +181,26 @@ The existing TXT already contains only 18 `VERIFIED` public production networks 
 - Candidate matrix: 28 data rows; source registry: 72 data rows.
 
 No external source was retried as part of this correction. Repository files were re-read only for storage-integrity and edit preparation. Mission status remains `IN_PROGRESS`.
+
+
+## Final closure and unresolved-case archive (2026-11-10T15:30:00Z)
+
+**Agent 01 status: COMPLETED.** Per finalization order, no further chain research, retrieval retry or evidence re-check was performed. The existing candidate statuses and TXT membership were preserved.
+
+### Final counts
+| Status | Networks |
+|---|---:|
+| VERIFIED | 18 |
+| PROVISIONAL | 8 |
+| CONFLICT | 1 |
+| MISSING | 0 |
+| DEPRECATED | 1 |
+| **Total candidates** | **28** |
+
+The primary TXT contains 18 VERIFIED public production Mainnets. No PROVISIONAL, CONFLICT or DEPRECATED candidate is included.
+
+### Unresolved-case archive
+The file `reports/research_reports/agent_01_retrieval_issues.csv` now contains 14 records: 2 independently recorded Blast HTTP 502 retrieval failures and 12 unresolved evidence/field records. These cover all eight PROVISIONAL candidates, the Mantle architecture conflict, UNKNOWN chain-model fields for Celestia and Solana, and Polygon zkEVM's UNKNOWN historical explorer field. Existing issue rows preserve the distinction between retrieval failures and evidence gaps/conflicts. No missing source URLs, event times or technical values were invented; where the original event time was unavailable, the existing log explicitly identifies the time as the report-registration time.
+
+### Next phase and limitations
+Agent 01 is closed. The next project phase is Native Token, Wrapped Token and Stablecoin discovery for the 18 VERIFIED networks. Archived unresolved chain cases remain for final project review and are not immediate tasks for the next agent. This closure records the completed scope and does not claim that every blockchain network worldwide has been identified.
