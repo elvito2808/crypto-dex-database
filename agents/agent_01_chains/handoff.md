@@ -102,3 +102,28 @@ Preserve all canonical records and CSV column order. Keep TXT limited to VERIFIE
 5. Verify every TXT line against metadata status and public Mainnet criteria; keep deprecated and uncertain records out.
 6. Reconcile all row counts and statuses across report, progress, handoff and PROJECT_STATUS; commit and re-read repository files only.
 7. Do not declare AGENT-01 complete; other ecosystems and broad candidate coverage remain unfinished. Status stays IN_PROGRESS.
+
+
+## FINAL HANDOFF — AGENT-01 COMPLETED (2026-11-10T15:30:00Z)
+
+Agent 01 — Chain Discovery is `COMPLETED`. No further chain research, retries, repeated source checks or resolution of archived issues is requested under this task.
+
+### Final reconciled inventory
+- Candidate records: 28
+- VERIFIED: 18
+- PROVISIONAL: 8
+- CONFLICT: 1
+- MISSING: 0
+- DEPRECATED: 1
+- Active public VERIFIED Mainnets in `data/01_chains.txt`: 18
+- Source registry: 72 entries
+- Candidate matrix: 28 data rows
+- Retrieval issue register: 14 rows total (2 retrieval failures + 12 unresolved evidence/field cases)
+
+Only VERIFIED public operational Mainnets remain in TXT. PROVISIONAL and CONFLICT networks remain excluded; the DEPRECATED Polygon zkEVM record remains outside the active list. All unresolved cases and UNKNOWN fields are retained in `reports/research_reports/agent_01_retrieval_issues.csv` for final project review. They are not assigned as immediate resolution work to the next agent.
+
+### Next project phase
+The next phase is discovery and registration of **Native Tokens, Wrapped Tokens and Stablecoins** associated with the 18 VERIFIED networks. The next agent should begin that token inventory using the verified network list as its scope. This is a new phase, not a continuation of Agent 01 chain research.
+
+### Closure rule
+Do not reopen Agent 01 or retry previously failed sources unless a project manager explicitly authorizes a separate later review. Agent 01 status is `COMPLETED`.
