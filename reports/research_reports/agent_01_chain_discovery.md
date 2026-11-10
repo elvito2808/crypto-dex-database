@@ -158,3 +158,26 @@ Key direct sources:
 Batch 3 closed the direct-evidence gaps for OP Mainnet and Taiko, upgraded Starknet from MISSING to VERIFIED, and improved but did not close Blast and Mantle. Seven new networks were verified and added to TXT. Seven additional candidates remain provisional. This is not comprehensive coverage of all Ethereum L2s and makes no claim of completeness.
 
 Exact next action: resume from `agents/agent_01_chains/handoff.md`. First resolve Mantle architecture and retry Blast first-party docs; then close the seven provisional candidates, especially Immutable, Sophon, Lens Chain, Cronos zkEVM, Manta Pacific, World Chain and Zora. Continue systematic OP Stack, Arbitrum Orbit, ZK Rollup, Validium/Volition and app-specific rollup discovery. Do not move to EVM L1 until L2 candidate coverage and deduplication have been further expanded. Overall mission remains IN_PROGRESS.
+
+
+## Batch 3 correction — retrieval issues and strict Mainnet scope (2026-11-10T15:30:00Z)
+
+This amendment supersedes any earlier wording that suggested retrying Blast documentation. Under the permanent retrieval-error rule, no further request is to be made to either failed Blast documentation URL. The two previously reported HTTP 502 events are now recorded separately in `reports/research_reports/agent_01_retrieval_issues.csv` as RET-000001 and RET-000002. The original event timestamps were not retained in the Batch 3 notes; the log therefore records the UTC time this correction formally detected/logged each historical failure and explicitly states that limitation, rather than fabricating an event time.
+
+Blast remains `PROVISIONAL`. Its official GitHub repositories support the Optimism-fork lineage and show a Mainnet deployment target, but the currently operational public Mainnet and its chain ID, native gas token and canonical explorer are not closed by available first-party evidence. Those canonical metadata fields are now `UNKNOWN`; third-party corroboration is retained only in source notes and not promoted into canonical parameter fields. Blast remains excluded from TXT.
+
+Mantle remains `CONFLICT`, not a retrieval issue: current Mantle documentation describes a ZK validity rollup, while the archived official repository describes an optimistic rollup with fraud proofs/EigenDA. Both claims and their source URLs remain preserved pending authoritative versioned reconciliation.
+
+The existing TXT already contains only 18 `VERIFIED` public production networks and excludes all provisional, conflict and deprecated records. Its header now explicitly states the Mainnet-only rule and count. Polygon zkEVM remains the one `DEPRECATED` record outside TXT. Testnet/devnet examples remain explanatory exclusions only and are not added as separate network records or side lists.
+
+### Reconciled counts at this correction checkpoint
+- Candidate metadata records: 28 unique canonical candidates.
+- `VERIFIED`: 18; all 18 and only these are in TXT.
+- `PROVISIONAL`: 8.
+- `CONFLICT`: 1 (Mantle).
+- `MISSING`: 0.
+- `DEPRECATED`: 1 (Polygon zkEVM), excluded from active TXT.
+- Retrieval issues: 2 (both Blast HTTP 502; separate exact URLs).
+- Candidate matrix: 28 data rows; source registry: 72 data rows.
+
+No external source was retried as part of this correction. Repository files were re-read only for storage-integrity and edit preparation. Mission status remains `IN_PROGRESS`.
