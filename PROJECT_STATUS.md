@@ -15,8 +15,8 @@
 - [x] Phase 2 — Native and wrapped assets (Agent 02 COMPLETED; 30 asset records).
 - [x] Phase 3 — Stablecoins (Agent 02 COMPLETED; 30 deployment records; native/bridged/unknown separated).
 - [x] Phase 4 — DEX discovery (Agent 03 COMPLETED; see research report and issue log).
-- [ ] Phase 5 — DEX technical details (next: Agent 04).
-- [ ] Phase 6 — Verification and integration.
+- [x] Phase 5 — DEX technical details (Agent 04 COMPLETED; 20 protocols, 25 deployments, 150 fee records, 54 issues, 125 sources).
+- [ ] Phase 6 — Verification and integration (CURRENT; Agent 05 assigned).
 
 ## Agent 01 — final status
 
@@ -56,7 +56,7 @@
 - One retrieval failure (Celestia) recorded without retry. Arbitrum Nova / Fraxtal / Zircuit use stale snapshots; Linea / OP Mainnet lack current per-DEX rows; Solana BisonFi / Meteora conflicts are excluded from main registry.
 - Contract/factory/router UNKNOWN values are intentional and documented; no address was guessed.
 - Source registry: 25 new Agent 03 entries appended to the 90 existing source records (final source count 115).
-- Next active task: `AGENT-04-DEX-TECHNICAL-DETAILS`. Agent 01 and Agent 02 records were not modified.
+- Agent 03 completed; its qualified registry, snapshots and unresolved discovery issues are retained unchanged. Agent 04 completed the technical-details handoff.
 
 
 ## Agent 04 — final DEX technical details status
@@ -67,5 +67,11 @@
 - Source Registry: 125 entries (10 Agent 04 sources appended).
 - Fee validation: PROVISIONAL 45; UNKNOWN 96; VERIFIED 9.
 - Native gas tokens remain separate from DEX fee-payment assets. Agent 02 STRK is documented as a contract-backed fee token, not a native balance coin.
-- All remaining UNKNOWN/PROVISIONAL fields are recorded in the Agent 04 issue log and deferred to Phase 6.
+- All 54 Agent 04 issues remain unresolved/deferred for Phase 6 review; UNKNOWN and PROVISIONAL values have not been represented as resolved.
 - Agent 03 registry, deployments, volume snapshots, candidates, issue log and qualification data were not modified; no known prior retrieval-failure source was retried.
+
+## Agent 05 — next active task
+
+- Task: `AGENT-05-VERIFICATION-AND-INTEGRATION` — `IN_PROGRESS / NEXT ACTIVE`.
+- Responsibility: independently verify and integrate the canonical chain, token, stablecoin and DEX datasets; audit sources, timestamps, identifiers, schema and referential integrity.
+- Preserve the 54 Agent 04 unresolved issues for Phase 6 review. Do not treat them as resolved merely because Agent 04 is COMPLETED.
