@@ -41,22 +41,28 @@ Agent 02 status: COMPLETED. Seven networks retain stablecoin-discovery evidence 
 
 Agent 03 status: COMPLETED. 20 qualified protocol identities; 25 qualified deployments; 82 volume snapshots; 70 non-qualified/unresolved candidates; 118 issue records. See `reports/research_reports/agent_03_dex_discovery.md`. Exact provider UTC window boundaries and several deployment identifiers remain UNKNOWN, documented for Agent 04.
 
-Next task: `AGENT-04-DEX-TECHNICAL-DETAILS`. Do not expand the network scope.
+Phase 4 / Agent 03 is closed. Its discovery decisions and deferred discovery/volume issues remain preserved; Phase 5 followed without expanding the network scope.
 
 ## Phase 5 — DEX technical details
-- [ ] Verify supported chains and deployment-specific availability.
-- [ ] Record gas asset for single-chain deployments where relevant.
-- [ ] Separate swap fee, protocol fee, LP fee, aggregator fee and network gas.
-- [ ] Record fee payer and payment asset; do not infer fee token from chain native asset.
-- [ ] Capture official UI and official explorer/deployment links.
+- [x] Process the 25 existing qualified deployments only; add no new DEX, protocol, deployment or network.
+- [x] Record supported deployment chain identifiers, Native Gas Token, technical identifiers, UI and explorer with evidence status.
+- [x] Separate swap/trading, LP, protocol, aggregator, network gas and builder/solver fee categories.
+- [x] Record fee rate/formula, payer, recipient, deduction stage and fee-payment asset where evidenced; retain UNKNOWN/PROVISIONAL otherwise.
+- [x] Publish 25 technical rows, 150 fee rows, 54 issue rows, research report and Agent 04 handoff.
+- [x] Align Data Dictionary and Source Registry.
 
 Dependency: Phase 4 qualifying DEX inventory.
 
-## Phase 6 — Verification and integration
+## Phase 6 — Verification and integration (CURRENT PHASE; Agent 05)
+
+Owner: `AGENT-05-VERIFICATION-AND-INTEGRATION` — Agent 05 is responsible for the independent verification and integration work below.
+
 - [ ] Deduplicate chains, assets, protocols and deployments.
 - [ ] Audit source quality, timestamps, identifiers and conflicts.
 - [ ] Validate CSV schemas, chain scope and referential integrity.
 - [ ] Publish canonical database and audit report.
+
+Agent 04 handoff to Agent 05: keep all 54 records in `reports/research_reports/agent_04_retrieval_issues.csv` unresolved and available for Phase 6 review. Do not delete, downgrade or report them as resolved without independent evidence. Agent 04 remains `COMPLETED`; these are accepted open issues, not a reopened Agent 04 task.
 
 ## Global exit criteria
 
@@ -68,3 +74,10 @@ Dependency: Phase 4 qualifying DEX inventory.
 
 
 Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deployments are represented. Unresolved technical and fee evidence gaps are documented in the Agent 04 issue log and deferred to Phase 6; no further rediscovery or retry is part of this phase.
+
+## Agent 04 closeout / Agent 05 handoff
+
+- Agent 04 status: `COMPLETED`.
+- Preserved Agent 04 final counts: 20 protocols, 25 deployments, 150 fee records, 54 unresolved issues and 125 Source Registry records.
+- All Phase 5 tasks above are complete. Remaining Agent 04 UNKNOWN/PROVISIONAL matters stay visible for Agent 05 in Phase 6.
+- Next active task: `AGENT-05-VERIFICATION-AND-INTEGRATION`.
