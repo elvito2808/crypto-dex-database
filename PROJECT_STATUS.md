@@ -29,9 +29,9 @@
 - MISSING: 0
 - DEPRECATED: 1
 - VERIFIED records in TXT: 18
-- Official / first-party / maintained ecosystem registry sources: 59
-- Independent / non-official sources: 7
-- Total source registry entries: 66
+- Official / first-party / maintained ecosystem registry sources: 60
+- Independent / non-official sources: 11
+- Total source registry entries: 71
 
 ## Key decisions
 1. TXT contains only VERIFIED active public production networks.
