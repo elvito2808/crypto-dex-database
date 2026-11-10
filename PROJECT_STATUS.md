@@ -57,3 +57,15 @@
 - Contract/factory/router UNKNOWN values are intentional and documented; no address was guessed.
 - Source registry: 25 new Agent 03 entries appended to the 90 existing source records (final source count 115).
 - Next active task: `AGENT-04-DEX-TECHNICAL-DETAILS`. Agent 01 and Agent 02 records were not modified.
+
+
+## Agent 04 — final DEX technical details status
+
+- Task `AGENT-04-DEX-TECHNICAL-DETAILS`: `COMPLETED` (2026-11-10T18:32:00Z).
+- Fixed Agent 03 scope preserved: 20 protocols and 25 qualified deployments across the 18 canonical chain universe; no new DEX/protocol/deployment/network.
+- Outputs: 25 technical rows, 150 fee rows (6 independent categories per deployment), 54 issue records.
+- Source Registry: 125 entries (10 Agent 04 sources appended).
+- Fee validation: PROVISIONAL 45; UNKNOWN 96; VERIFIED 9.
+- Native gas tokens remain separate from DEX fee-payment assets. Agent 02 STRK is documented as a contract-backed fee token, not a native balance coin.
+- All remaining UNKNOWN/PROVISIONAL fields are recorded in the Agent 04 issue log and deferred to Phase 6.
+- Agent 03 registry, deployments, volume snapshots, candidates, issue log and qualification data were not modified; no known prior retrieval-failure source was retried.
