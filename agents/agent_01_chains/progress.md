@@ -29,8 +29,8 @@
 - DEPRECATED: 1
 - TXT records: 18
 - Official / first-party / maintained registry sources: 59
-- Independent sources: 7
-- Total source registry entries: 66
+- Independent sources: 11
+- Total source registry entries: 71
 
 ## Focal record outcomes
 - [x] OP Mainnet — direct official network page closes chain ID 10, ETH, Mainnet and explorer evidence; VERIFIED.
