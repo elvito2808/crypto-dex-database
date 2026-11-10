@@ -53,7 +53,7 @@
 - [ ] Separately catalogue testnets/devnets, private networks, forks/renames and deprecated networks.
 
 ## Next action
-Resume from `agents/agent_01_chains/handoff.md`. Resolve Mantle and Blast first, then close the seven provisional candidates and broaden L2 discovery. Do not mark Phase 1 or the overall mission complete.
+Agent 01 is completed. The next project phase is Native Token, Wrapped Token and Stablecoin discovery for the 18 VERIFIED networks; unresolved chain cases remain archived for final project review.
 
 
 ## Batch 3 permanent-policy correction (2026-11-10T15:30:00Z)
@@ -62,7 +62,7 @@ Resume from `agents/agent_01_chains/handoff.md`. Resolve Mantle and Blast first,
 - Blast remains PROVISIONAL. Canonical chain symbol, chain ID, network identifier, current operational status and official explorer are UNKNOWN where first-party verification is unavailable.
 - Two Blast HTTP 502 retrieval failures are recorded separately in `reports/research_reports/agent_01_retrieval_issues.csv`; no retries are permitted. Mantle remains an evidence CONFLICT, not a retrieval failure.
 - Source registry contains 72 data rows; candidate matrix contains 28 data rows; retrieval issue log contains 2 data rows.
-- Next batch resumes from `agents/agent_01_chains/handoff.md`. Overall status remains `IN_PROGRESS`.
+- Agent 01 is closed; overall project remains `IN_PROGRESS` pending the next token-inventory phase.
 
 
 ## AGENT-01 final status — COMPLETED (2026-11-10T15:30:00Z)
