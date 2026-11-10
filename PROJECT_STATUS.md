@@ -2,10 +2,10 @@
 
 - Project: Crypto DEX Database
 - Repository: https://github.com/elvito2808/crypto-dex-database
-- Overall status: `IN_PROGRESS` (Agent 03 completed; Agent 04 is next)
-- Current phase: Phase 5 — DEX Technical Details
-- Next active task: `AGENT-04-DEX-TECHNICAL-DETAILS`
-- Last checkpoint UTC: 2026-11-10T17:08:28Z
+- Overall status: `IN_PROGRESS` (Agents 01–04 COMPLETED; Phase 6 active)
+- Current phase: Phase 6 — Verification and Integration
+- Next active task: `AGENT-05-VERIFICATION-AND-INTEGRATION`
+- Last checkpoint UTC: 2026-11-10T18:58:57.688Z
 - Canonical production Mainnet scope: 18 networks in `data/01_chains.txt`.
 
 ## Phase completion
