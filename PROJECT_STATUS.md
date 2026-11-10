@@ -54,3 +54,12 @@
 
 ## Next action
 Resume from `agents/agent_01_chains/handoff.md`. Resolve Mantle and Blast first, then close the seven provisional candidates and broaden L2 discovery. Do not mark Phase 1 or the overall mission complete.
+
+
+## Batch 3 permanent-policy correction (2026-11-10T15:30:00Z)
+- Main-list rule: 18 VERIFIED active public Mainnets in `data/01_chains.txt`; no test/dev/private/experimental/deprecated/unverified networks.
+- Reconciled candidate counts: 28 total; VERIFIED 18, PROVISIONAL 8, CONFLICT 1, MISSING 0, DEPRECATED 1. Polygon zkEVM remains outside active TXT.
+- Blast remains PROVISIONAL. Canonical chain symbol, chain ID, network identifier, current operational status and official explorer are UNKNOWN where first-party verification is unavailable.
+- Two Blast HTTP 502 retrieval failures are recorded separately in `reports/research_reports/agent_01_retrieval_issues.csv`; no retries are permitted. Mantle remains an evidence CONFLICT, not a retrieval failure.
+- Source registry contains 72 data rows; candidate matrix contains 28 data rows; retrieval issue log contains 2 data rows.
+- Next batch resumes from `agents/agent_01_chains/handoff.md`. Overall status remains `IN_PROGRESS`.
