@@ -126,3 +126,14 @@ Final response must include:
 - latest checkpoint and exact resume point.
 
 Quality over raw record count. Do not fabricate completeness.
+
+
+## Permanent amendment — public Mainnet scope and retrieval-error protocol
+
+Effective immediately for every subsequent batch:
+
+1. The primary `data/01_chains.txt` is exclusively a list of distinct, public, operational Mainnet networks with `VERIFIED` status. Never include testnets, devnets, private/permissioned networks, experimental environments, deprecated/sunset networks, or candidates whose Mainnet existence/current operation is not sufficiently evidenced. Do not create unnecessary side lists for test/private environments.
+2. On any retrieval failure (HTTP error of any status, timeout, DNS/SSL, inaccessible docs/API/site/repository, or file read/load failure), do not retry that same source. Record one row per independent failure in `reports/research_reports/agent_01_retrieval_issues.csv` with the exact URL/location, UTC detection time, error, affected fields, verification impact and action. Never guess URLs, status codes or error details.
+3. Retrieval failures are not evidence conflicts. Log failures only in the retrieval-issues file. For unresolved contradictions between credible sources, preserve both claims and use `CONFLICT`. Where a failed retrieval leaves a field unverified, set the field to `UNKNOWN`; do not infer it from third-party corroboration. Use `PROVISIONAL` or `MISSING` where evidence is insufficient, and `VERIFIED` only where all required claims are supported.
+4. Do not repeat an external retrieval to validate storage. After committing, re-read changed repository files from GitHub only; this is a storage-integrity check, not permission to retry failed external sources.
+5. Synchronize TXT, metadata, source registry, candidate matrix, retrieval issue log, report, progress, handoff and project status. Keep the overall mission `IN_PROGRESS` until counts and inclusion criteria reconcile.
