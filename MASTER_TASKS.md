@@ -33,12 +33,15 @@ Agent 02 status: COMPLETED. The asset inventory is evidence-backed but not an ex
 Agent 02 status: COMPLETED. Seven networks retain stablecoin-discovery evidence gaps; the lack of an entry is not interpreted as proof that no stablecoin exists.
 
 ## Phase 4 — DEX discovery
-- [ ] Discover DEX protocols and distinct deployments on the 18 canonical networks.
-- [ ] Qualify only observed 24-hour volume strictly above USD 50,000.
-- [ ] Record provider/source, observation timestamp UTC, volume, chain, protocol and deployment identity.
-- [ ] Keep below-threshold and unverified candidates in separate review/exclusion records.
+- [x] Discover DEX protocols and distinct deployments on the 18 canonical networks.
+- [x] Qualify only observed 24-hour volume strictly above USD 50,000.
+- [x] Record provider/source, observation timestamp UTC, volume, chain, protocol and deployment identity.
+- [x] Keep below-threshold and unverified candidates in separate review/exclusion records.
+- [x] Publish protocol registry, qualified deployment registry, volume snapshots, candidate log, issue log, research report and Agent 03 handoff.
 
-Next task: Agent 03 — DEX Discovery. Do not expand the network scope.
+Agent 03 status: COMPLETED. 18 qualified protocols; 25 qualified deployments; 82 volume snapshots; 70 non-qualified/unresolved candidates; 118 issue records. See `reports/research_reports/agent_03_dex_discovery.md`. Exact provider UTC window boundaries and several deployment identifiers remain UNKNOWN, documented for Agent 04.
+
+Next task: `AGENT-04-DEX-TECHNICAL-DETAILS`. Do not expand the network scope.
 
 ## Phase 5 — DEX technical details
 - [ ] Verify supported chains and deployment-specific availability.

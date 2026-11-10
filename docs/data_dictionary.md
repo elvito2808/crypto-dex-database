@@ -140,3 +140,62 @@ Fields: `issue_id,chain_name,asset_or_record,affected_field,source_url_or_locati
 - A VERIFIED record confirms only the claims supported by its cited sources; it does not imply exhaustive chain token coverage, liquidity, solvency or active market trading.
 - Yield-bearing receipt tokens are labeled as wrappers rather than independent reserve-backed issuers.
 - Only the 18 names in `data/01_chains.txt` are in scope. No testnet, devnet, private network or other chain is permitted.
+
+## Agent 03 — DEX protocol registry
+
+### File: `data/04_dex_registry.csv`
+
+One row per DEX protocol identity. This is the qualified protocol registry only; a protocol is present only if at least one chain-specific deployment has a valid 24h USD volume observation strictly greater than USD 50,000.
+
+| Field | Meaning |
+|---|---|
+| dex_id | Stable protocol-level ID, shared across the protocol's deployments only where identity evidence supports it. |
+| dex_name | Provider/official display name. Do not collapse forks or same-name deployments without identity evidence. |
+| website_url / official_docs_url | Official URL or UNKNOWN. |
+| protocol_category / protocol_description | Discovery-stage classification; detailed AMM/order-book and fee analysis is out of scope. |
+| official_source_urls | Official identity/deployment source URLs separated by semicolons; UNKNOWN if none confirmed. |
+| discovery_status | QUALIFIED only for protocols with at least one qualifying chain deployment. |
+| notes | Supported chain evidence and explicit identity limitations. |
+
+### File: `data/05_dex_deployments.csv`
+
+One row per qualified DEX deployment on one canonical chain. Protocol identity and deployment identity are different keys.
+
+| Field | Meaning |
+|---|---|
+| deployment_id | Stable ID for a single DEX + chain deployment. |
+| dex_id / dex_name | Parent protocol identity; dex_id refers to `data/04_dex_registry.csv`. |
+| chain_name | Must match one of the 18 names in `data/01_chains.txt`. |
+| deployment_name | Human-readable DEX + chain label. |
+| contract_address / factory_address / router_address | Exact verified identifiers or UNKNOWN; never guess. |
+| other_deployment_identifier | Other source-backed deployment identity, not an inferred contract. |
+| ui_url / explorer_url | Official UI / chain explorer URL, or UNKNOWN when not evidenced. |
+| activity_status | Discovery-stage observation such as ACTIVE_VOLUME_OBSERVED; not a full on-chain audit. |
+| verification_status | Evidence confidence for the deployment identity and volume; partial aggregator evidence must remain explicit. |
+| source_urls / last_checked_utc / notes | Evidence URLs, UTC agent retrieval time and caveats. |
+
+### File: `data/06_dex_volume_snapshots.csv`
+
+Each row is one independent provider observation. Do not merge snapshots captured at different times.
+
+| Field | Meaning |
+|---|---|
+| snapshot_id | Unique volume observation ID. |
+| deployment_id / dex_id / dex_name / chain_name | The specific chain deployment observed. |
+| volume_24h_original / original_currency | Provider display amount and original unit. |
+| volume_24h_usd | USD equivalent; same as source amount when original currency is USD. |
+| measurement_window | Provider-reported 24h interval and its as-of label; state UNKNOWN if exact UTC boundaries are unavailable. |
+| provider / source_url | Named analytics provider and exact chain-filtered source URL. |
+| observed_at_utc | Agent retrieval timestamp, not a substitute for the provider's measurement cutoff. |
+| volume_status | OBSERVED_24H, BELOW_THRESHOLD, STALE_PROVIDER_SNAPSHOT, CONFLICT, etc. |
+| qualification_result | QUALIFIED iff volume_24h_usd > 50000; otherwise BELOW_THRESHOLD. This field is purely the numeric comparison, not a freshness or deployment-identity assertion. |
+| notes | Display rounding, source freshness, conflict, and cutoff limitations. |
+
+### Agent 03 candidates and issue log
+
+- `agent_03_dex_candidates.csv` keeps every non-qualified, stale, conflicting, or unverified candidate and the reason it is not in the main protocol registry.
+- `agent_03_retrieval_issues.csv` records retrieval errors, volume gaps, aggregate-only data, source conflicts, UNKNOWN identifiers and below-threshold exclusions.
+- Controlled candidate statuses: QUALIFIED, BELOW_THRESHOLD, UNVERIFIED_VOLUME, UNKNOWN, INACTIVE, CONFLICT.
+- The strict threshold is **> USD 50,000**. USD 50,000 is not eligible.
+- A provider's chain aggregate is never allocated to a DEX protocol without deployment-specific evidence.
+- A dated historical snapshot can compare above the threshold numerically, but it does not establish current eligibility for the main registry.
