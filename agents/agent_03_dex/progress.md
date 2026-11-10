@@ -27,3 +27,14 @@
 - No DEX has been marked INACTIVE without direct shutdown evidence.
 
 Unresolved records do not block Agent 03 closure.
+
+## Read-back and integrity report
+
+- Artifact commit SHA: `0b344786900f5d9feef6c98a719c50eb593fcc61`.
+- Read-back was performed from `main` after commit. CSV counts: 18 protocol rows; 25 qualified deployment rows; 82 volume snapshots; 70 candidates; 118 issues; 115 source rows.
+- Unique primary identifiers: 18/18 dex_id, 25/25 deployment_id, 82/82 snapshot_id, 70/70 candidate_id, 118/118 issue_id; no duplicates.
+- All 25 qualified deployments reference a protocol in the main registry and have at least one non-conflicted, current chain-specific snapshot strictly above USD 50,000.
+- Snapshot deployment references resolve to a qualified deployment or a candidate deployment; all chain names in discovery files are canonical or explicitly UNKNOWN.
+- All CSV headers are unique; source_registry IDs are unique.
+- Solana BisonFi and Meteora observations are stored as two distinct same-date captures each (capture A vs capture B); both pairs remain CONFLICT and outside the qualified registry. Exact provider capture times/cutoffs are not available.
+- Finalization commit contains this handoff/read-back update and the corrected four Solana conflict snapshots.

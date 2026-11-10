@@ -91,7 +91,7 @@ Chain aggregates above are reported as context only. They do not replace chain-s
 - **Celestia:** one failed retrieval (Internal Error); no retries were made.
 - **Arbitrum Nova, Fraxtal, Zircuit:** only Nov 4 / Nov 5 source snapshots were exposed. Historical amounts are preserved, but do not establish current eligibility.
 - **Linea and OP Mainnet:** aggregate volume is visible, but per-protocol chain-level values could not be verified from current accessible page data. OP Mainnet protocol rows are dated Oct 17 and retained as historical/unverified.
-- **Solana:** two same-date DefiLlama captures differ for BisonFi and Meteora; these candidates are `CONFLICT` and are excluded from the main registry pending precise source-cutoff reconciliation. The chain aggregate also differed between page captures.
+- **Solana:** two same-date DefiLlama captures differ for BisonFi ($157.07m vs $103.44m) and Meteora ($130.37m vs $105.31m). All four observations are kept as separate snapshots, each marked `CONFLICT`; both candidates are excluded from the main registry pending precise source-cutoff reconciliation. The chain aggregate also differed between page captures.
 - **Provider measurement boundary:** exact UTC window start/end are not visible. The recorded UTC timestamp is the agent's retrieval time, not a claim about the provider's data cutoff.
 - **Display precision:** several provider values are abbreviated; their normalized numbers preserve the shown precision.
 - **Deployment identity:** contract, factory and router addresses were not guessed. UI URLs are `UNKNOWN` unless confirmed in an official source. These are recorded as explicit issues.

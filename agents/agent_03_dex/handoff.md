@@ -29,3 +29,23 @@ Use these as the source-of-truth outputs for qualified DEX inventory:
 - Do not reopen or repeat Agent 01 / Agent 02 research.
 - Do not assume same-name DEX forks or deployments share identifiers.
 - Do not infer fee assets, fee schedules or payment-token mechanics from the discovery records.
+
+## Read-back / integrity report
+
+**Artifact commit SHA:** `0b344786900f5d9feef6c98a719c50eb593fcc61`  
+**Finalization commit:** recorded in the repository's resulting `main` head and Agent 03 completion record.
+
+The committed output files were fetched again from GitHub `main`. Verified counts:
+
+| File | Rows (excluding header) |
+|---|---:|
+| `data/04_dex_registry.csv` | 18 |
+| `data/05_dex_deployments.csv` | 25 |
+| `data/06_dex_volume_snapshots.csv` | 82 |
+| `agent_03_dex_candidates.csv` | 70 |
+| `agent_03_retrieval_issues.csv` | 118 |
+| `sources/source_registry.csv` | 115 |
+
+Integrity checks passed: all primary IDs unique; all CSV headers unique; chain scope limited to the 18 canonical entries (or explicit UNKNOWN coverage marker); every deployment points to a registered protocol; every snapshot deployment resolves to a qualified deployment or candidate; every main-registry deployment has a current, non-conflicted snapshot > USD 50,000.
+
+Solana conflict evidence is retained as four independent observations: BisonFi capture A $157.07m / capture B $103.44m; Meteora capture A $130.37m / capture B $105.31m. Both observations per DEX are marked `CONFLICT`, despite each amount numerically exceeding the threshold, and neither DEX is included in the qualified registry pending reconciliation. Capture timestamps and exact provider window cutoffs are not exposed.
