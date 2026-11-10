@@ -70,8 +70,14 @@
 - All 54 Agent 04 issues remain unresolved/deferred for Phase 6 review; UNKNOWN and PROVISIONAL values have not been represented as resolved.
 - Agent 03 registry, deployments, volume snapshots, candidates, issue log and qualification data were not modified; no known prior retrieval-failure source was retried.
 
-## Agent 05 — next active task
+## Agent 05 — final status
 
-- Task: `AGENT-05-VERIFICATION-AND-INTEGRATION` — `IN_PROGRESS / NEXT ACTIVE`.
-- Responsibility: independently verify and integrate the canonical chain, token, stablecoin and DEX datasets; audit sources, timestamps, identifiers, schema and referential integrity.
-- Preserve the 54 Agent 04 unresolved issues for Phase 6 review. Do not treat them as resolved merely because Agent 04 is COMPLETED.
+- Task `AGENT-05-VERIFICATION-AND-INTEGRATION`: `COMPLETED` (Phase 6 closed).
+- Canonical integrated database: 793 rows, 25 columns, 793 unique type-prefixed record IDs.
+- Consolidated issues: 218 rows (Agent 01: 14; Agent 02: 32; Agent 03: 118; Agent 04: 54), all `OPEN_DEFERRED_FINAL`.
+- Validation controls: 32; Data Dictionary supplemented with 82 missing field definitions (128 unique source-schema field names documented).
+- Source Registry audit: 125 unique IDs; 3 duplicate URL groups; 14 used HTTP(S) URLs absent from exact registry matching; 6 registry URLs not directly referenced.
+- Previously failed retrievals retained and not retried. No DEX discovery, volume refresh, requalification or unsupported verification upgrade was performed.
+- Deliverables: `data/final_crypto_dex_database.csv`, Agent 05 report, consolidated issues, validation results, instructions, progress and handoff.
+- Original Agent 01–04 data files, reports, issues and handoffs remain unchanged.
+- Remaining UNKNOWN, PROVISIONAL, CONFLICT and OPEN_DEFERRED_FINAL items are documented and do not block procedural closure.
