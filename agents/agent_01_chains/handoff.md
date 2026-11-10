@@ -84,3 +84,21 @@ Arbitrum Sepolia (421614), Taiko Hoodi (167013), Mantle Sepolia (5003), OP Sepol
 
 ## Handoff rule
 Preserve all canonical records and CSV column order. Keep TXT limited to VERIFIED active public production networks. Do not infer fee tokens or current activity from popularity. Record unknowns and conflicts explicitly. Synchronize all eight deliverables at each coherent checkpoint. Overall mission remains IN_PROGRESS.
+
+
+## Permanent retrieval policy and Batch 3 correction (2026-11-10T15:30:00Z)
+- Do not retry any source after any retrieval failure (HTTP, timeout, DNS/SSL, access, load or read error). Record each independent failure with exact URL/location and UTC logging time in `reports/research_reports/agent_01_retrieval_issues.csv`.
+- Blast's two previously reported HTTP 502 failures are logged as RET-000001 (docs root) and RET-000002 (network-information route). No further request to either URL is permitted. The original failure timestamps were not available; log timestamp is explicitly identified as formal detection/logging time.
+- Blast stays PROVISIONAL. Canonical chain symbol, chain ID, network identifier, current Mainnet status and official explorer are UNKNOWN where unverified by first-party evidence; third-party values remain non-canonical notes. Exclude from TXT.
+- Mantle stays CONFLICT because current official docs and archived official repo make materially different architecture claims. This is an evidence conflict, not a retrieval error.
+- TXT policy: only VERIFIED active public Mainnets. Current count is 18. No testnets, devnets, private/permissioned networks, experimental environments, deprecated networks or uncertain candidates.
+- Reconciled counts: 28 candidates; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; 18 TXT names; 2 retrieval issue rows; 72 source registry entries.
+
+## Exact next steps for Batch 4
+1. Start from this corrected checkpoint; do not repeat failed Blast URL requests.
+2. Resolve Mantle architecture/version discrepancy from already available source records or a genuinely new authoritative source (not a retry of a failed URL).
+3. Investigate the seven PROVISIONAL L2 candidates: Immutable zkEVM, Sophon Mainnet, Lens Chain, Cronos zkEVM, Manta Pacific, World Chain and Zora. For any failed source, log and move on; unknown fields stay UNKNOWN.
+4. Continue broad Ethereum L2 discovery (Arbitrum Orbit, OP Stack, ZK Stack, Validium/Volition and app-specific rollups), keeping candidate matrix and metadata deduplicated.
+5. Verify every TXT line against metadata status and public Mainnet criteria; keep deprecated and uncertain records out.
+6. Reconcile all row counts and statuses across report, progress, handoff and PROJECT_STATUS; commit and re-read repository files only.
+7. Do not declare AGENT-01 complete; other ecosystems and broad candidate coverage remain unfinished. Status stays IN_PROGRESS.
