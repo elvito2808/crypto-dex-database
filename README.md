@@ -47,4 +47,4 @@ At every meaningful checkpoint, an agent must save its data, update its `progres
 
 ## Current phase
 
-Agent 01 — Chain Discovery: `COMPLETED`. Agent 02 — Token and Stablecoin Discovery: `COMPLETED`. Agent 03 — DEX Discovery: `COMPLETED`. The current phase is Phase 5 — DEX Technical Details; next task: `AGENT-04-DEX-TECHNICAL-DETAILS` (not yet started). See `PROJECT_STATUS.md` and `agents/agent_03_dex/handoff.md`.
+Agent 01 — Chain Discovery: `COMPLETED`. Agent 02 — Token and Stablecoin Discovery: `COMPLETED`. Agent 03 — DEX Discovery: `COMPLETED`. Phase 5 — DEX Technical Details is complete (`AGENT-04-DEX-TECHNICAL-DETAILS = COMPLETED`). See `PROJECT_STATUS.md`, `reports/research_reports/agent_04_dex_technical_details.md` and `agents/agent_04_dex/handoff.md`.
