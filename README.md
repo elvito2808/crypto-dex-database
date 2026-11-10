@@ -47,12 +47,21 @@ At every meaningful checkpoint, an agent must save its data, update its `progres
 
 ## Current phase
 
-Agents 01–05 and Phase 6 are complete. The integrated output is `data/final_crypto_dex_database.csv` (793 rows); the full audit is `reports/research_reports/agent_05_verification_report.md`; 218 unresolved originating issues remain preserved in `reports/research_reports/agent_05_consolidated_issues.csv` with `OPEN_DEFERRED_FINAL` status. See `reports/research_reports/agent_05_validation_results.csv`, `PROJECT_STATUS.md`, `MASTER_TASKS.md` and `agents/agent_05_verification/handoff.md`.
+Agents 01–05 and Phase 6 are complete. The integrated output is `data/final_crypto_dex_database.csv` (807 rows); the full audit is `reports/research_reports/agent_05_verification_report.md`; 232 unresolved originating issues remain preserved (Agent 01–04: 218; Agent05: 14) in `reports/research_reports/agent_05_consolidated_issues.csv` with `OPEN_DEFERRED_FINAL` status. See `reports/research_reports/agent_05_validation_results.csv`, `PROJECT_STATUS.md`, `MASTER_TASKS.md` and `agents/agent_05_verification/handoff.md`.
 
 
 ## Final integrated database
 
 - Canonical networks: 18 VERIFIED public production Mainnets.
-- Integrated export: `data/final_crypto_dex_database.csv` — 793 rows, original payloads and traceable identifiers.
+- Integrated export: `data/final_crypto_dex_database.csv` — 807 rows, 25 columns, 807 unique record IDs and original payloads and traceable identifiers.
 - Validation: `reports/research_reports/agent_05_validation_results.csv`.
-- Open issue archive: `reports/research_reports/agent_05_consolidated_issues.csv` — 218 originating issues retained; completion does not imply resolution.
+- Open issue archive: `reports/research_reports/agent_05_consolidated_issues.csv` — 232 originating issues retained, including AG5-ISS-URL-0001 through AG5-ISS-URL-0014; completion does not imply resolution.
+
+
+## Agent 05 bounded final correction
+
+- Final integrated database: 807 data rows, 25 columns, 807 unique `record_id` values.
+- Consolidated issue register: 232 rows — Agent01 14; Agent02 32; Agent03 118; Agent04 54; Agent05 14.
+- Agent05 has logged the 14 existing used-but-unregistered URLs as `AG5-ISS-URL-0001` through `AG5-ISS-URL-0014`, each `SOURCE_REGISTRY_TRACEABILITY_GAP` and `OPEN_DEFERRED_FINAL`.
+- Validation Results contains 33 controls; SR-03 explicitly references these 14 issues and remains `OPEN_DEFERRED_FINAL`.
+- The original 218 Agent01–04 issues and `sources/source_registry.csv` are unchanged. No source was retrieved or retried.
