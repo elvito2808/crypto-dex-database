@@ -83,7 +83,7 @@
 - Blast official docs 502; obtain direct chain config and gas/explorer evidence.
 - Seven provisional candidates require current first-party operational and parameter evidence.
 - Next: close those gaps and broaden L2/rollup discovery further; only then begin EVM L1.
-- Overall mission remains IN_PROGRESS.
+- Agent 01 status was subsequently finalized as COMPLETED; overall project remains IN_PROGRESS pending the token-inventory phase.
 
 
 ## Permanent policy amendment / Batch 3 correction (2026-11-10T15:30:00Z)
@@ -93,7 +93,7 @@
 - Mantle remains one evidence conflict (CONFLICT), not a retrieval issue.
 - Cumulative reconciled counts: 28 candidates; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; TXT 18; retrieval issues 2; source registry 72 rows.
 - Batch 3 correction files: instructions, TXT header, metadata, source registry, report, candidate matrix, retrieval issue log, progress, handoff, project status.
-- Next: resolve Mantle's versioned architecture contradiction using already available evidence only unless a new distinct source is identified; close seven provisional candidate evidence gaps; continue L2 discovery. Never retry a failed source URL. Overall mission remains IN_PROGRESS.
+- Superseded by final closure below: no further Agent 01 chain discovery or issue resolution is authorized.
 
 
 ## Final closure — 2026-11-10T15:30:00Z
