@@ -12,9 +12,9 @@
 
 Agent 05 completed a bounded audit of the committed Agent 01–04 repository outputs and created an integrated, traceable export. The canonical network list remains exactly the 18 VERIFIED production Mainnets in `data/01_chains.txt`. Protocol identity remains distinct from chain-specific deployment. Original Agent 01–04 datasets, research reports, issue files and handoffs were not overwritten.
 
-The integrated export contains **793 source records** with **793 unique type-prefixed record IDs** and 25 columns. Each source row is carried in `payload_json`, with its original file path and source identifiers retained. The consolidated issue register contains **218/218 original issue records**, all preserved as `OPEN_DEFERRED_FINAL`.
+The integrated export contains **807 source records** with **807 unique type-prefixed record IDs** and 25 columns. Each source row is carried in `payload_json`, with its original file path and source identifiers retained. The consolidated issue register contains **232 issues**: all **218/218 original Agent 01–04 issue records** preserved unchanged, plus **14 new Agent05 URL traceability issues**, all `OPEN_DEFERRED_FINAL`.
 
-Completion is procedural. It means that the in-scope controls were run and remaining uncertainty was documented. It does **not** mean that the 218 issues, UNKNOWN values, PROVISIONAL values or source gaps have been resolved.
+Completion is procedural. It means that the in-scope controls were run and remaining uncertainty was documented. It does **not** mean that the 232 issues, UNKNOWN values, PROVISIONAL values or source gaps have been resolved.
 
 ## 2. Scope and source-of-truth artifacts
 
@@ -37,10 +37,11 @@ The audit read the canonical chain list, chain metadata, token and stablecoin da
 | Agent 02 issues | 32 |
 | Agent 03 issues | 118 |
 | Agent 04 issues | 54 |
-| **Consolidated unresolved issues** | **218** |
-| **Integrated master database** | **793** |
+| Agent 05 source traceability issues | 14 |
+| **Consolidated unresolved issues** | **232** |
+| **Integrated master database** | **807** |
 
-The master row count is 18 + 30 + 30 + 20 + 25 + 82 + 70 + 25 + 150 + 125 + 218 = **793**.
+The master row count is 18 + 30 + 30 + 20 + 25 + 82 + 70 + 25 + 150 + 125 + 218 + 14 = **807**.
 
 ## 3. Structural, identifier and reference controls
 
@@ -103,6 +104,27 @@ Fourteen distinct HTTP(S) URLs used by existing data rows do not have an exact S
 13. `https://uniswap.org`
 14. `https://developers.uniswap.org/docs/protocols/v2/deployments`
 
+The same 14 URLs are now separately logged as Agent05 issues `AG5-ISS-URL-0001` through `AG5-ISS-URL-0014`. This is a bounded issue-logging correction only: URL strings were taken from the already recorded list above and matched against the existing source CSVs; no URL was fetched or retried. Each issue is `SOURCE_REGISTRY_TRACEABILITY_GAP`, has affected field `source_registry_exact_url_mapping`, review status `BOUNDED_REVIEW_ONLY`, and final status `OPEN_DEFERRED_FINAL`. The Source Registry was not edited.
+
+| Agent05 issue | Consuming source file(s) and record(s) |
+|---|---|
+| AG5-ISS-URL-0001 | `data/02_chain_tokens.csv` — CT-FRAXTAL-FRAX-NATIVE (`source_urls`). |
+| AG5-ISS-URL-0002 | `data/03_stablecoins.csv` — SC-SOLANA-USDT (`source_urls`). |
+| AG5-ISS-URL-0003 | `data/03_stablecoins.csv` — SC-UNICHAIN-USDC-NATIVE (`source_urls`). |
+| AG5-ISS-URL-0004 | `data/03_stablecoins.csv` — SC-ZKSYNC-USDC-NATIVE and SC-ZKSYNC-USDC-E (`source_urls`). |
+| AG5-ISS-URL-0005 | `data/01_chains_metadata.csv` — Base; `data/07_dex_technical_details.csv` — TECH-BASE-AERO, TECH-BASE-UNISWAP, TECH-BASE-PANCAKESWAP, TECH-BASE-HANJI-PROTOCOL. |
+| AG5-ISS-URL-0006 | `data/01_chains_metadata.csv` — Mode. |
+| AG5-ISS-URL-0007 | `data/01_chains_metadata.csv` — Scroll; `data/07_dex_technical_details.csv` — TECH-SCROLL-HONEYPOP-DEX. |
+| AG5-ISS-URL-0008 | `data/01_chains_metadata.csv` — Blast candidate metadata row (PROVISIONAL; outside canonical list). |
+| AG5-ISS-URL-0009 | `data/01_chains_metadata.csv` — Ink; `data/07_dex_technical_details.csv` — TECH-INK-UNISWAP, TECH-INK-AERO, TECH-INK-NADO. |
+| AG5-ISS-URL-0010 | `data/01_chains_metadata.csv` — Fraxtal. |
+| AG5-ISS-URL-0011 | `data/01_chains_metadata.csv` — Soneium; `data/07_dex_technical_details.csv` — TECH-SONEIUM-KYO-FINANCE, TECH-SONEIUM-UNISWAP. |
+| AG5-ISS-URL-0012 | `data/01_chains_metadata.csv` — Unichain; `data/07_dex_technical_details.csv` — TECH-UNICHAIN-UNISWAP. |
+| AG5-ISS-URL-0013 | `data/04_dex_registry.csv` — DEX-UNISWAP; `data/05_dex_deployments.csv` — five Uniswap deployments; `data/07_dex_technical_details.csv` — five Uniswap technical records. |
+| AG5-ISS-URL-0014 | `data/07_dex_technical_details.csv` — TECH-ARBITRUM-ONE-UNISWAP. |
+
+The three duplicate URL groups and six Source Registry entries not directly referenced remain exactly as previously reported. These 14 issue rows document traceability gaps; they do not create Source Registry IDs or certify link reachability.
+
 Six registered source rows were not directly referenced by exact URL match in the reviewed data URL fields: SRC-000010, SRC-000019, SRC-000021, SRC-000063, SRC-000072 and SRC-000114. These omissions and duplicates are disclosed; no guessed source metadata was added.
 
 URL-to-source mapping is literal and exact. A Source Registry ID is attached only when a URL exactly matches `source_url`; duplicate matches retain all matching IDs. The original source URL field and complete payload remain preserved.
@@ -123,9 +145,10 @@ All originating issue logs are represented in `agent_05_consolidated_issues.csv`
 | Agent 02 | 32 | OPEN_DEFERRED_FINAL |
 | Agent 03 | 118 | OPEN_DEFERRED_FINAL |
 | Agent 04 | 54 | OPEN_DEFERRED_FINAL |
-| **Total** | **218** | **OPEN_DEFERRED_FINAL** |
+| Agent 05 | 14 | OPEN_DEFERRED_FINAL |
+| **Total** | **232** | **OPEN_DEFERRED_FINAL** |
 
-The consolidated records classify source retrieval failures, evidence gaps, conflicts, coverage gaps, volume evidence/qualification problems, technical identifier gaps, UNKNOWN/PROVISIONAL conditions and other recorded issue types. Every row carries the original issue ID, origin, source file, original status/details and `payload_json`. Agent 01/02 issues were not absorbed into Agent 03/04 issues. Agent 03's 118 and Agent 04's 54 issues remain complete.
+The consolidated records classify source retrieval failures, evidence gaps, conflicts, coverage gaps, volume evidence/qualification problems, technical identifier gaps, UNKNOWN/PROVISIONAL conditions, and the 14 Agent05 source registry traceability gaps. Every row carries the original issue ID, origin, source file, original status/details and `payload_json`. The original 218 Agent01–04 rows were retained byte-for-byte and were not deleted, merged or rewritten. The 14 new Agent05 rows use IDs AG5-ISS-URL-0001..0014, exact URL strings, source file/record references derived from the current repository CSVs, the affected field `source_registry_exact_url_mapping`, and `BOUNDED_REVIEW_ONLY`.
 
 The bounded review compared issue content with currently stored repository records and handoffs only. No issue was resolved without conclusive evidence in the existing repository snapshot. No new web discovery, source retry, DEX discovery or volume requalification was performed.
 
@@ -136,9 +159,9 @@ The original Data Dictionary documented 46 unique source CSV field names, while 
 ## 10. Files created and updated
 
 Created:
-- `data/final_crypto_dex_database.csv` — 793 data rows; 25 columns.
-- `reports/research_reports/agent_05_consolidated_issues.csv` — 218 data rows; 19 columns.
-- `reports/research_reports/agent_05_validation_results.csv` — 32 validation controls.
+- `data/final_crypto_dex_database.csv` — 807 data rows; 25 columns; 807 unique `record_id` values.
+- `reports/research_reports/agent_05_consolidated_issues.csv` — 232 data rows; 19 columns; 232 unique composite origin/issue IDs.
+- `reports/research_reports/agent_05_validation_results.csv` — 33 validation controls; SR-03 remains OPEN_DEFERRED_FINAL and references all 14 Agent05 URL issues.
 - `reports/research_reports/agent_05_verification_report.md`.
 - `agents/agent_05_verification/instructions.md`.
 - `agents/agent_05_verification/progress.md`.
@@ -155,8 +178,9 @@ No original Agent 01–04 data, reports, issue logs, handoffs or progress files 
 All writes are sequential. For each update, the current file and blob SHA are fetched first; after each create/update, the file is fetched again and its contents compared with the submitted content. New files were also read back from GitHub. Per-file commit and read-back blob SHAs are recorded in the Agent 05 handoff and final delivery.
 
 Known Agent 05 commits:
-- Integrated database: `a3209fd2fb18b8c53bd8f177455f15b8afbd8525`; blob `6fb0ac9ffea7477e70893113a61ccba608074d6b`.
-- Consolidated issues: `81dedfe9f35c2543976c6f81c12e9db5dac6532a`; blob `072a8516274c94542ca99dd24c2b11c84f469e8c`.
+- Integrated database initial commit: `a3209fd2fb18b8c53bd8f177455f15b8afbd8525`; correction commit: `b84701fe8120148b6e922b3dd971db7fb3d68e5f`; final blob `ff9b3eff32348a16577a84b590368bcd1282e5aa`.
+- Consolidated issues initial commit: `81dedfe9f35c2543976c6f81c12e9db5dac6532a`; correction commit: `9771d7388781479f86a3c84a6743f4d45b1ea21f`; final blob `b6098b98f0999dfafc48da36c4caddba14c96f57`.
+- Validation results correction commit: `526cd059fca8ba2f849f76b5a706c79783778149`; final blob `1f56995a6653e56cdc6532730427abe41cddf485`.
 - Data Dictionary: `a3435e01d912ec9b918f5e850f808dfb0f28c51e`; blob `b5ed55fd27148919a8bd0541f9996e8b2366e7e2`.
 
 ## 12. Closure
