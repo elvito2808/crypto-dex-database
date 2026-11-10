@@ -1,7 +1,13 @@
 # VERIFIED public production networks only.
 # One canonical chain name per line; alphabetically sorted.
-# Do not add testnets, devnets, private networks, or deprecated networks.
+# Testnets, devnets, private networks, deprecated and unverified candidates are excluded.
 Arbitrum One
+Base
 Celestia
+Linea
+Mantle
+Mode
+OP Mainnet
+Scroll
 Solana
 ZKsync Era
