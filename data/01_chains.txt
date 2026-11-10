@@ -1,13 +1,21 @@
 # VERIFIED public production networks only.
-# One canonical chain name per line; alphabetically sorted.
-# Testnets, devnets, private networks, deprecated and unverified candidates are excluded.
+# One canonical network name per line; alphabetically sorted.
+# Excludes testnets, private networks, deprecated networks and all non-VERIFIED candidates.
+Abstract
+Arbitrum Nova
 Arbitrum One
 Base
 Celestia
+Fraxtal
+Ink
 Linea
-Mantle
 Mode
 OP Mainnet
 Scroll
 Solana
+Soneium
+Starknet
+Taiko
+Unichain
+Zircuit
 ZKsync Era
