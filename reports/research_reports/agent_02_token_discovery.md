@@ -92,13 +92,21 @@ No stablecoin deployment was authoritatively catalogued in this pass for **Abstr
 
 | Measure | Count |
 |---|---:|
-| Total chain-token rows | 30 |
 | Native chain assets (`is_native_chain_asset=TRUE`) | 17 |
-| Contract-backed protocol fee token records | 1 |
-| Wrapped/bridged token examples | 11 |
+| Contract-backed protocol fee token (STRK on Starknet) | 1 |
+| Separate bridged ETH fee-candidate record on Starknet | 1 |
+| Wrapped/Bridged examples | 11 |
+| **Total chain-token records** | **30** |
+
+The Starknet ETH row (`CT-STARKNET-ETH-BRIDGED`) is a separate Ethereum-origin bridged token contract. It is not the native Starknet asset and must not be merged with STRK or with any native-asset record. Its current acceptance for paying Gas is `UNKNOWN`; it is recorded as a separate bridged ETH fee-candidate record. STRK remains the distinct contract-backed protocol fee token.
+
+| Verification status | Count |
+|---|---:|
 | VERIFIED | 26 |
 | PROVISIONAL | 4 |
-| CONFLICT / MISSING / DEPRECATED | 0 / 0 / 0 |
+| CONFLICT | 0 |
+| MISSING | 0 |
+| DEPRECATED | 0 |
 
 ### `data/03_stablecoins.csv`
 
