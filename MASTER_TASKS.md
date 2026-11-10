@@ -6,63 +6,59 @@
 - [x] Prepare Agent 01 instructions.
 
 ## Phase 1 — Chain discovery
-- [ ] Identify candidate public mainnets across EVM and non-EVM ecosystems.
-- [ ] Classify L1, L2/rollup, sidechain, appchain, subnet, and other network types.
-- [ ] Separately record testnets/devnets, private networks, forks, and deprecated networks.
-- [ ] Verify canonical identity, status, official documentation, explorer, and identifiers.
-- [ ] Produce `data/01_chains.txt`, `data/01_chains_metadata.csv`, research report, and handoff.
+- [x] Identify and classify the accepted canonical public networks.
+- [x] Verify canonical identity and core network metadata for the 18 main-list entries.
+- [x] Publish `data/01_chains.txt`, chain metadata, research report and handoff.
+- [x] Close Agent 01 as COMPLETED; keep unverified/conflict/deprecated candidate records outside the main TXT.
 
-Acceptance: all main-list entries are VERIFIED, deduplicated, source-backed, and have a clear network identity. Uncertain records remain outside the main TXT list.
+Acceptance: met for the accepted 18-network baseline. Agent 01's deferred candidate universe stays archived for final project review; it is not part of Agent 02 or Agent 03 scope.
 
 ## Phase 2 — Native and wrapped assets
-- [ ] Map native gas/fee asset(s) per chain.
-- [ ] Distinguish native issuance from bridged/wrapped representations.
-- [ ] Capture contract/mint identifiers, decimals, issuer/bridge, and evidence.
-- [ ] Record ambiguous or chain-specific representations without conflating tickers.
+- [x] Map native balance assets and gas/fee assets separately across all 18 target chains.
+- [x] Distinguish native coin balances from contract-backed fee tokens and bridged/wrapped representations.
+- [x] Record available contract/mint identifiers, decimals, issuer/bridge and evidence.
+- [x] Preserve UNKNOWN fields and incomplete wrapped-token catalogues in the issue register.
+- [x] Publish `data/02_chain_tokens.csv` and the Agent 02 report.
 
-Dependency: Phase 1 chain baseline.
+Agent 02 status: COMPLETED. The asset inventory is evidence-backed but not an exhaustive on-chain token census; see the issue register.
 
 ## Phase 3 — Stablecoins
-- [ ] Identify fiat-backed, crypto-backed, commodity-backed, and algorithmic stablecoins.
-- [ ] Distinguish native deployments from bridged representations.
-- [ ] Record issuer, peg, deployment chain, contract/mint address, decimals, status, and evidence.
-- [ ] Avoid assuming that same-symbol assets share issuer, backing, or contract.
+- [x] Identify issuer- or network-documented stablecoin deployments on target chains.
+- [x] Separate native stablecoin issuance from bridged representations (for example USDC and USDC.e).
+- [x] Record peg/backing, issuer, chain, contract/mint, decimals, origin and mechanism where evidenced.
+- [x] Label yield-bearing stablecoin wrappers separately from independent issuers.
+- [x] Preserve UNKNOWN fields and chain coverage gaps in the issue register.
+- [x] Publish `data/03_stablecoins.csv`.
 
-Dependency: Phase 1 chain baseline; can run alongside Phase 2.
+Agent 02 status: COMPLETED. Seven networks retain stablecoin-discovery evidence gaps; the lack of an entry is not interpreted as proof that no stablecoin exists.
 
 ## Phase 4 — DEX discovery
-- [ ] Discover DEX protocols and distinct deployments.
-- [ ] Measure 24h volume and retain only observations strictly above USD 50,000 for the qualifying inventory.
-- [ ] Record provider/source, observation timestamp UTC, volume, chain, and protocol/deployment identity.
-- [ ] Keep below-threshold and unverified candidates in a separate excluded/review log where useful.
+- [ ] Discover DEX protocols and distinct deployments on the 18 canonical networks.
+- [ ] Qualify only observed 24-hour volume strictly above USD 50,000.
+- [ ] Record provider/source, observation timestamp UTC, volume, chain, protocol and deployment identity.
+- [ ] Keep below-threshold and unverified candidates in separate review/exclusion records.
 
-Dependency: chain baseline; token and stablecoin work provides context but is not a hard prerequisite.
+Next task: Agent 03 — DEX Discovery. Do not expand the network scope.
 
 ## Phase 5 — DEX technical details
 - [ ] Verify supported chains and deployment-specific availability.
 - [ ] Record gas asset for single-chain deployments where relevant.
-- [ ] Separate swap fee, protocol fee, LP fee, aggregator fee, and network gas.
-- [ ] Record fee payer and payment asset; do not infer fee token from chain native token.
+- [ ] Separate swap fee, protocol fee, LP fee, aggregator fee and network gas.
+- [ ] Record fee payer and payment asset; do not infer fee token from chain native asset.
 - [ ] Capture official UI and official explorer/deployment links.
 
 Dependency: Phase 4 qualifying DEX inventory.
 
 ## Phase 6 — Verification and integration
-- [ ] Deduplicate chains, assets, protocols, and deployments.
-- [ ] Audit source quality, timestamps, identifiers, and conflicting claims.
-- [ ] Validate CSV schemas and referential integrity.
+- [ ] Deduplicate chains, assets, protocols and deployments.
+- [ ] Audit source quality, timestamps, identifiers and conflicts.
+- [ ] Validate CSV schemas, chain scope and referential integrity.
 - [ ] Publish canonical database and audit report.
 
 ## Global exit criteria
 
 - No guessed values presented as verified.
-- Each critical claim has evidence and retrieval date.
+- Every critical claim has direct evidence and UTC audit time.
 - Conflicts and unknowns remain explicit.
-- Data is reproducible and resumable from the latest checkpoint.
-
-
-## Phase 1 checkpoint — 2026-11-09
-
-- Research is in progress; first batch contains 4 candidates (4 VERIFIED) across initial Ethereum L2 and non-EVM/modular L1 samples.
-- Evidence and checkpoint files are saved. This does not satisfy Phase 1 acceptance; coverage, separate non-production classifications, deduplication, and review remain outstanding.
-- Resume from `agents/agent_01_chains/handoff.md`.
+- Same-symbol assets remain separate unless contract, issuer and provenance evidence match.
+- Output is reproducible and resumable.
