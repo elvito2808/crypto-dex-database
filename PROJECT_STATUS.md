@@ -39,12 +39,6 @@
 - Read-back confirmed CSV rows/headers, scope, status counts, unique IDs and no repeated chain+contract/mint pairs.
 - This curated evidence inventory is not a full on-chain token census or liquidity audit.
 
-## Next phase — Agent 03 DEX Discovery
-
-- [ ] Discover DEX protocols and distinct deployments on only the 18 canonical networks.
-- [ ] Qualify only 24-hour volume observations strictly greater than USD 50,000.
-- [ ] Record provider/source, 24-hour volume, UTC observation timestamp, chain and deployment identity.
-- [ ] Keep below-threshold and unverified candidates separately.
 
 ## Integrity rules
 

@@ -47,4 +47,4 @@ At every meaningful checkpoint, an agent must save its data, update its `progres
 
 ## Current phase
 
-Repository bootstrap completed; Agent 01 (Chain Discovery) is prepared. See `PROJECT_STATUS.md` and `agents/agent_01_chains/instructions.md`.
+Agent 01 — Chain Discovery: `COMPLETED`. Agent 02 — Token and Stablecoin Discovery: `COMPLETED`. Agent 03 — DEX Discovery: `COMPLETED`. The current phase is Phase 5 — DEX Technical Details; next task: `AGENT-04-DEX-TECHNICAL-DETAILS` (not yet started). See `PROJECT_STATUS.md` and `agents/agent_03_dex/handoff.md`.
