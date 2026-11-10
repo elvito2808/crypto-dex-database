@@ -63,3 +63,15 @@ Resume from `agents/agent_01_chains/handoff.md`. Resolve Mantle and Blast first,
 - Two Blast HTTP 502 retrieval failures are recorded separately in `reports/research_reports/agent_01_retrieval_issues.csv`; no retries are permitted. Mantle remains an evidence CONFLICT, not a retrieval failure.
 - Source registry contains 72 data rows; candidate matrix contains 28 data rows; retrieval issue log contains 2 data rows.
 - Next batch resumes from `agents/agent_01_chains/handoff.md`. Overall status remains `IN_PROGRESS`.
+
+
+## AGENT-01 final status — COMPLETED (2026-11-10T15:30:00Z)
+- Agent task `AGENT-01-CHAIN-DISCOVERY`: `COMPLETED`.
+- Overall project status remains `IN_PROGRESS`; subsequent token-inventory phase is pending.
+- Final chain candidate counts: 28 total; VERIFIED 18; PROVISIONAL 8; CONFLICT 1; MISSING 0; DEPRECATED 1.
+- Active VERIFIED public Mainnets in `data/01_chains.txt`: 18.
+- Source registry: 72 entries; L2 candidate matrix: 28 data rows.
+- Unresolved-case register: `reports/research_reports/agent_01_retrieval_issues.csv`, 14 rows (2 retrieval failures and 12 evidence/field issues).
+- Only VERIFIED public operational Mainnets are in TXT. Provisional/conflict/deprecated records remain excluded.
+- Next phase: identify and register Native Tokens, Wrapped Tokens and Stablecoins for the 18 VERIFIED networks.
+- All unresolved chain cases are reserved for final project review, not immediate next-agent work. No new research or retry was conducted during finalization.
