@@ -34,7 +34,7 @@ Preserved all prior canonical network records and original CSV column order. Rev
 - DEPRECATED: 1
 - Records in `data/01_chains.txt`: 18
 - Official / first-party / maintained ecosystem registry sources: 60
-- Independent / non-official cross-check and discovery sources: 7
+- Independent / non-official cross-check and discovery sources: 11
 - Total source registry entries: 71
 
 Status arithmetic: 18 + 8 + 1 + 0 + 1 = 28. TXT contains only VERIFIED records.
@@ -117,7 +117,7 @@ Zora is included in the seven above? Yes: Zora is the seventh provisional candid
 
 ## Sources
 
-The source registry now contains 60 official / first-party / maintained ecosystem-registry entries and 7 independent sources (66 total). Official sources are linked to individual claims in metadata and the candidate matrix. Independent sources are clearly marked as research or explorer sources and are never treated as project-owned documentation.
+The source registry now contains 60 official / first-party / maintained ecosystem-registry entries and 11 independent sources (71 total). Official sources are linked to individual claims in metadata and the candidate matrix. Independent sources are clearly marked as research or explorer sources and are never treated as project-owned documentation.
 
 Key direct sources:
 - Mantle current network parameters: https://docs.mantle.xyz/network/for-users/how-to-guides/connecting-wallet-to-mantle-network
