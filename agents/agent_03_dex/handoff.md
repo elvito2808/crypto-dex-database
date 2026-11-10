@@ -15,13 +15,18 @@ Use these as the source-of-truth outputs for qualified DEX inventory:
 - `reports/research_reports/agent_03_retrieval_issues.csv` — 118 unresolved or recorded issues.
 - `reports/research_reports/agent_03_dex_discovery.md` — research narrative and 18-chain coverage matrix.
 
-## Priority verification queue
+## Deferred discovery issues — Phase 6 review only
 
-1. Verify exact contract/factory/router addresses for all 25 qualified deployments; Agent 03 intentionally left these UNKNOWN rather than infer addresses.
-2. Reconcile the DefiLlama page capture differences for BisonFi and Meteora on Solana before considering them for the qualified registry.
-3. Obtain current per-deployment volume rows for Linea and OP Mainnet; do not allocate the chain aggregate to protocols.
-4. Revisit Arbitrum Nova, Fraxtal and Zircuit only with a new source snapshot in Agent 04's evidence refresh, if needed.
-5. Investigate Celestia DEX discovery through alternate independent sources; the failed DefiLlama URL must not be retried as part of this Agent 03 run.
+The following unresolved discovery and volume-evidence issues are already documented in Agent 03's candidate and retrieval/issue records:
+
+1. BisonFi and Meteora Solana volume conflicts: the separate same-date observations remain marked `CONFLICT`.
+2. Linea and OP Mainnet: current per-DEX volume evidence gaps; chain aggregates must not be allocated to individual DEXs.
+3. Arbitrum Nova, Fraxtal and Zircuit: stale provider volume snapshots do not establish current qualification.
+4. Celestia: DEX discovery coverage gap following the previously failed retrieval.
+5. Any other unresolved volume-qualification or discovery-evidence issue already recorded in `reports/research_reports/agent_03_retrieval_issues.csv`.
+
+These items are already documented; do not retry failed sources. Agent 04 must not perform volume rediscovery, refresh volume snapshots, re-qualify candidates, or change Agent 03's qualification decisions. These issues are deferred to Phase 6 independent verification/integration only, if still relevant.
+
 
 ## Boundaries
 
@@ -29,6 +34,7 @@ Use these as the source-of-truth outputs for qualified DEX inventory:
 - Do not reopen or repeat Agent 01 / Agent 02 research.
 - Do not assume same-name DEX forks or deployments share identifiers.
 - Do not infer fee assets, fee schedules or payment-token mechanics from the discovery records.
+- Agent 04's scope is strictly technical details for the existing 25 qualified deployments and 20 registered protocol identities.
 
 ## Read-back / integrity report
 
