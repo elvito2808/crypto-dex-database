@@ -12,9 +12,9 @@ Batch 3 saved. Overall mission remains IN_PROGRESS and is not complete. Prior re
 - Cumulative unique candidates: 28
 - Cumulative: 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED
 - VERIFIED records in TXT: 18
-- Official / first-party / maintained ecosystem registry sources: 59
-- Independent sources: 7
-- Total sources: 66
+- Official / first-party / maintained ecosystem registry sources: 60
+- Independent sources: 11
+- Total sources: 71
 
 ## Focal record results
 1. Mantle — CONFLICT. Current docs provide MNT, chain ID 5000 and Mantlescan, but current docs call it a ZK validity rollup while archived official repo README calls it optimistic rollup / fraud proofs / EigenDA. Excluded from TXT.
