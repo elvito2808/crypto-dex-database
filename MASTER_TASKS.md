@@ -60,7 +60,7 @@ Owner: `AGENT-05-VERIFICATION-AND-INTEGRATION` — Agent 05 is responsible for t
 - [x] Deduplicate and integrate canonical chains, assets, protocols, deployments and source-linked records.
 - [x] Audit source quality, timestamps, identifiers, status boundaries and conflicts; document source URL registry gaps.
 - [x] Validate CSV schemas, canonical chain scope, volume threshold arithmetic and referential integrity.
-- [x] Preserve all 218 originating issues with explicit OPEN_DEFERRED_FINAL status where unresolved.
+- [x] Preserve all 218 originating Agent 01–04 issues and append 14 Agent05 source registry traceability issues; all unresolved records use OPEN_DEFERRED_FINAL.
 - [x] Publish integrated database, validation results, consolidated issue register, audit report and Agent 05 handoff.
 
 Agent 04 handoff to Agent 05: keep all 54 records in `reports/research_reports/agent_04_retrieval_issues.csv` unresolved and available for Phase 6 review. Do not delete, downgrade or report them as resolved without independent evidence. Agent 04 remains `COMPLETED`; these are accepted open issues, not a reopened Agent 04 task.
@@ -87,11 +87,22 @@ Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deplo
 ## Phase 6 / Agent 05 closeout
 
 - Task `AGENT-05-VERIFICATION-AND-INTEGRATION`: `COMPLETED`.
-- Integrated export: 793 data rows with 793 unique type-prefixed record IDs.
-- Issue consolidation: 218/218 original issues preserved (Agent 01 14; Agent 02 32; Agent 03 118; Agent 04 54). Unresolved records remain `OPEN_DEFERRED_FINAL`.
+- Integrated export after bounded final correction: 807 data rows, 25 columns and 807 unique type-prefixed record IDs.
+- Issue consolidation: 232 rows: original Agent01 14 + Agent02 32 + Agent03 118 + Agent04 54 (218 retained unchanged), plus Agent05 14 source traceability issues. All 232 remain `OPEN_DEFERRED_FINAL`.
 - Canonical network scope remains the exact 18 VERIFIED Mainnets in `data/01_chains.txt`.
 - DEX inventory remains 20 protocol identities and 25 qualified deployments. No additional discovery, volume refresh or requalification was performed.
 - Fee categories remain six independent types with 25 records each; UNKNOWN and PROVISIONAL values remain.
 - Data Dictionary extended for all 128 unique source CSV fields and Agent 05 export schemas.
-- Source Registry issues (duplicate URLs, unregistered used URLs and unused entries) are disclosed in validation/report; no source was retried and no speculative registry entries were added.
+- Source Registry issues (three duplicate URL groups, 14 used-but-unregistered URLs and six unreferenced entries) are disclosed; the 14 unregistered URLs are individually logged as AG5-ISS-URL-0001..0014. SR-03 remains OPEN_DEFERRED_FINAL. No source was retried and no speculative registry entries were added.
 - Original Agent 01–04 artifacts remain unchanged. Phase 6 is closed; remaining evidence gaps are handed off for archival awareness, not as new discovery authorization.
+
+
+## Agent 05 bounded final correction — 14 Source Registry traceability issues
+
+- [x] Append `AG5-ISS-URL-0001` through `AG5-ISS-URL-0014` to the consolidated issue register.
+- [x] Add matching `AGENT_ISSUE` records to the final integrated database.
+- [x] Preserve all 218 original Agent 01–04 issue rows unchanged; consolidated count is 232.
+- [x] Validate 807 master rows, 25 columns, and 807 unique `record_id` values.
+- [x] Update SR-03 to reference all 14 new issues while retaining `OPEN_DEFERRED_FINAL`.
+- [x] Synchronize the report, progress, handoff, validation register, project status and README.
+- [x] Keep `sources/source_registry.csv` unchanged; perform no source fetch, retry or speculative URL registration.
