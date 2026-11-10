@@ -2,69 +2,85 @@
 
 - Task: `AGENT-01-CHAIN-DISCOVERY`
 - Status: `IN_PROGRESS`
-- Last checkpoint: 2026-11-10T00:00:52Z
-- Batch 2: existing-record audit + ten Ethereum L2 candidates reviewed.
+- Batch: 3
+- Last checkpoint UTC: 2026-11-10T00:06:50Z
 
-## Counts (cumulative)
-- Networks/candidates examined: 14
-- Networks/candidates identified and recorded: 14
-- VERIFIED: 10
-- PROVISIONAL: 2
-- CONFLICT: 0
-- MISSING: 1
+## Batch 3 counts
+- Candidates examined: 19 (5 focal + 14 new)
+- Newly identified candidates: 14
+- Distinct canonical networks after deduplication: 19
+- VERIFIED at batch end: 10
+- PROVISIONAL: 8
+- CONFLICT: 1
+- MISSING: 0
+- DEPRECATED: 0
+- New verified records: 7
+- New provisional candidates: 7
+- Existing records revised: 5 (Mantle, OP Mainnet, Blast, Taiko, Starknet)
+- TXT records: 18
+
+## Cumulative counts (Batches 1–3)
+- Unique candidate records: 28
+- Distinct canonical candidates after deduplication: 28
+- VERIFIED: 18
+- PROVISIONAL: 8
+- CONFLICT: 1
+- MISSING: 0
 - DEPRECATED: 1
-- VERIFIED public production networks in TXT: 10
-- Official source registry entries: 19
-- Non-official / independent source registry entries: 2
-- Total source registry entries: 21
+- TXT records: 18
+- Official / first-party / maintained registry sources: 59
+- Independent sources: 7
+- Total source registry entries: 66
 
-## Completed in this batch
-- [x] Re-audited Arbitrum One; native gas asset updated to ETH.
-- [x] Re-audited Celestia; native asset updated to TIA; Cosmos SDK PoS and explorer notes added; experimental Mainnet Beta caveat retained.
-- [x] Re-audited Solana; SOL fee asset reaffirmed.
-- [x] Re-audited ZKsync Era; mainnet identifiers and ETH currency reaffirmed.
-- [x] Verified and added Base, Linea, Mantle, Mode, OP Mainnet and Scroll.
-- [x] Recorded Blast and Taiko as PROVISIONAL.
-- [x] Recorded Starknet as MISSING pending accessible first-party evidence.
-- [x] Recorded Polygon zkEVM as DEPRECATED based on Polygon's sunset notice; excluded from TXT.
-- [x] Updated all seven required outputs and source registry.
+## Focal record outcomes
+- [x] OP Mainnet — direct official network page closes chain ID 10, ETH, Mainnet and explorer evidence; VERIFIED.
+- [x] Taiko — current official network reference and protocol / contract docs close chain ID 167000, ETH, Taikoscan, Type-1 based zkEVM and active Mainnet; VERIFIED.
+- [x] Starknet — official docs now accessible; SN_MAIN, STRK fee token, Cairo VM, validity rollup, Ethereum settlement and Voyager confirmed; VERIFIED.
+- [ ] Blast — official docs repeatedly returned 502; official GitHub confirms OP Stack fork and Mainnet deployment, but chain ID, gas token and explorer remain third-party corroboration; PROVISIONAL.
+- [ ] Mantle — direct current docs provide MNT, chain ID 5000, Mantlescan; current docs say ZK validity rollup while archived official repo says optimistic rollup; CONFLICT.
 
-## Categories
-- [ ] EVM L1
-- [ ] Non-EVM L1 (Solana sample; continue)
-- [x] Ethereum L2 / rollups (partial: Arbitrum One, Base, Linea, Mantle, Mode, OP Mainnet, Scroll, ZKsync Era; more required)
-- [ ] Other L2 / rollups (Blast and Taiko unresolved; Starknet missing evidence)
-- [ ] Sidechains
-- [ ] Cosmos / IBC (Celestia sample only; continue)
-- [ ] Substrate-based
-- [ ] Appchains / subnets
-- [ ] Other architectures
-- [ ] Testnets / devnets (separate catalogue still required)
-- [ ] Private / permissioned networks (separate catalogue still required)
-- [x] Deprecated / sunset candidates (Polygon zkEVM identified; wider catalogue required)
+## New candidates
+### VERIFIED and added to TXT
+- Arbitrum Nova (42170, ETH, Nitro AnyTrust)
+- Ink (57073, ETH, OP Stack)
+- Fraxtal (252, FRAX, OP Stack)
+- Soneium (1868, ETH, OP Stack)
+- Unichain (130, ETH, OP Stack)
+- Zircuit (48900, ETH, OP Stack-derived ZK rollup)
+- Abstract (2741, ETH, ZKsync Elastic Network)
 
-## Existing records amended
-- Arbitrum One: chain_symbol UNKNOWN → ETH.
-- Celestia: chain_symbol UNKNOWN → TIA; explorer populated with caveat; architecture clarified; VM remains UNKNOWN.
-- Solana: SOL fee asset reaffirmed; no chain ID invented.
-- ZKsync Era: official Mainnet parameters rechecked; no material field changes.
+### PROVISIONAL, excluded from TXT
+- Blast
+- Immutable zkEVM
+- Sophon Mainnet
+- Lens Chain
+- Cronos zkEVM
+- Manta Pacific
+- World Chain
+- Zora
 
-## New records
-- VERIFIED: Base, Linea, Mantle, Mode, OP Mainnet, Scroll.
-- PROVISIONAL: Blast, Taiko.
-- MISSING: Starknet.
-- DEPRECATED: Polygon zkEVM.
+## Categories covered
+- [x] Optimistic / OP Stack — partial, multiple independent chains added
+- [x] Arbitrum Nitro / AnyTrust — Arbitrum One and Nova; Orbit ecosystem remains partial
+- [x] ZK rollups — Starknet, Taiko, Zircuit, Abstract plus existing networks
+- [x] Validium / external DA candidates — Sophon, Lens Chain, Cronos zkEVM; remain provisional
+- [x] App-specific L2 candidates — Ink, Unichain, Soneium, Fraxtal, Abstract
+- [ ] Full Ethereum L2 candidate universe — not complete
+- [ ] Other ecosystems and L1s — not complete
 
 ## Files saved
 - [x] data/01_chains.txt
 - [x] data/01_chains_metadata.csv
 - [x] sources/source_registry.csv
 - [x] reports/research_reports/agent_01_chain_discovery.md
+- [x] reports/research_reports/agent_01_l2_candidate_matrix.csv (new)
 - [x] agents/agent_01_chains/progress.md
 - [x] agents/agent_01_chains/handoff.md
 - [x] PROJECT_STATUS.md
 
 ## Blockers / next action
-- Blast first-party docs not retrieved; Taiko official network parameter page not retrievable; Starknet docs inaccessible in this pass.
-- Next: close these three evidence gaps, expand Ethereum L2/Rollup candidate coverage, then proceed to EVM L1.
-- Overall Phase 1 remains IN_PROGRESS; no completion claim.
+- Mantle architecture conflict needs a current, versioned authoritative explanation.
+- Blast official docs 502; obtain direct chain config and gas/explorer evidence.
+- Seven provisional candidates require current first-party operational and parameter evidence.
+- Next: close those gaps and broaden L2/rollup discovery further; only then begin EVM L1.
+- Overall mission remains IN_PROGRESS.
