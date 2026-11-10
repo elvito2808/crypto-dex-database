@@ -136,7 +136,7 @@ Effective immediately for every subsequent batch:
 2. On any retrieval failure (HTTP error of any status, timeout, DNS/SSL, inaccessible docs/API/site/repository, or file read/load failure), do not retry that same source. Record one row per independent failure in `reports/research_reports/agent_01_retrieval_issues.csv` with the exact URL/location, UTC detection time, error, affected fields, verification impact and action. Never guess URLs, status codes or error details.
 3. Retrieval failures are not evidence conflicts. Log failures only in the retrieval-issues file. For unresolved contradictions between credible sources, preserve both claims and use `CONFLICT`. Where a failed retrieval leaves a field unverified, set the field to `UNKNOWN`; do not infer it from third-party corroboration. Use `PROVISIONAL` or `MISSING` where evidence is insufficient, and `VERIFIED` only where all required claims are supported.
 4. Do not repeat an external retrieval to validate storage. After committing, re-read changed repository files from GitHub only; this is a storage-integrity check, not permission to retry failed external sources.
-5. Synchronize TXT, metadata, source registry, candidate matrix, retrieval issue log, report, progress, handoff and project status. Keep the overall mission `IN_PROGRESS` until counts and inclusion criteria reconcile.
+5. Synchronize TXT, metadata, source registry, candidate matrix, retrieval issue log, report, progress, handoff and project status. Once finalization is authorized and counts reconcile, mark the Agent 01 task `COMPLETED`; the overall project may remain `IN_PROGRESS` while later phases are pending.
 
 
 ## Finalization amendment — AGENT-01 closed
