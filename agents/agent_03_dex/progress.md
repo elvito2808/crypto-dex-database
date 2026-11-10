@@ -8,7 +8,7 @@
 
 - [x] Confirmed canonical scope from `data/01_chains.txt` (18 networks).
 - [x] Attempted chain-filtered volume discovery for all 18 networks; 17 pages returned content and Celestia failed once (no retry).
-- [x] Created qualified DEX protocol registry: 18 protocols.
+- [x] Created qualified DEX protocol registry: 20 chain-scoped / evidence-linked protocol identities.
 - [x] Created chain-specific qualified deployment registry: 25 deployments.
 - [x] Created independent 24h snapshot register: 82 observations.
 - [x] Preserved 70 non-qualified / unresolved candidates in the candidate file.
@@ -31,7 +31,7 @@ Unresolved records do not block Agent 03 closure.
 ## Read-back and integrity report
 
 - Artifact commit SHA: `0b344786900f5d9feef6c98a719c50eb593fcc61`.
-- Read-back was performed from `main` after commit. CSV counts: 18 protocol rows; 25 qualified deployment rows; 82 volume snapshots; 70 candidates; 118 issues; 115 source rows.
+- Read-back was performed from `main` after commit. CSV counts: 20 protocol rows; 25 qualified deployment rows; 82 volume snapshots; 70 candidates; 118 issues; 115 source rows.
 - Unique primary identifiers: 18/18 dex_id, 25/25 deployment_id, 82/82 snapshot_id, 70/70 candidate_id, 118/118 issue_id; no duplicates.
 - All 25 qualified deployments reference a protocol in the main registry and have at least one non-conflicted, current chain-specific snapshot strictly above USD 50,000.
 - Snapshot deployment references resolve to a qualified deployment or a candidate deployment; all chain names in discovery files are canonical or explicitly UNKNOWN.

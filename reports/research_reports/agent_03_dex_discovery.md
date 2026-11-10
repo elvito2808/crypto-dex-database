@@ -10,7 +10,7 @@
 
 - Canonical chain scope: **18 / 18** networks from `data/01_chains.txt`; no other chain was added.
 - DefiLlama chain pages attempted: **18**; successful retrievals: **17**; retrieval failures: **1** (Celestia; no retry).
-- Qualified protocol registry: **18** distinct DEX protocols.
+- Qualified protocol registry: **20** distinct DEX protocol identities.
 - Qualified deployment registry: **25** chain-specific deployment rows.
 - Volume observations retained: **82** distinct snapshots.
 - Non-qualified / unresolved candidate rows: **70**.
@@ -25,6 +25,7 @@
 3. A provider row is qualified only when its own chain-specific USD amount is strictly greater than USD 50,000. The source currency was USD, so no conversion was necessary.
 4. Kept each observed row as its own volume snapshot. The provider publishes a calendar as-of date and a 24h label, but the retrieved page does not expose exact UTC start/end instants. `observed_at_utc` is the agent retrieval timestamp; the provider measurement boundary remains explicitly undisclosed.
 5. Kept provider display precision. Abbreviated values (for example `$108.11m`) are normalized to USD numbers at the displayed precision; they are not represented as unrounded raw API amounts.
+6. Repeated provider display labels across different chains were not automatically merged into one DEX protocol. Shared protocol IDs are used only where official cross-chain documentation supports the identity (Uniswap and PancakeSwap); other repeated labels receive chain-scoped protocol IDs to avoid merging forks or same-name projects without evidence.
 6. Consulted official sources for protocol identity / supported-chain context where returned (Uniswap, PancakeSwap, Ekubo, Kyo Finance, Curve, PumpSwap). Contract/factory/router values remain `UNKNOWN` where no authoritative chain-specific identifier was confirmed.
 
 **Primary analytics provider:** DefiLlama chain-filtered DEX pages.  
@@ -103,7 +104,7 @@ Chain aggregates above are reported as context only. They do not replace chain-s
 | Metric | Count |
 |---|---:|
 | Canonical chains checked | 18 |
-| Qualified DEX protocols | 18 |
+| Qualified DEX protocol identities | 20 |
 | Qualified chain deployments | 25 |
 | Volume snapshots | 82 |
 | Candidate rows | 70 |

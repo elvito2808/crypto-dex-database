@@ -8,7 +8,7 @@
 
 Use these as the source-of-truth outputs for qualified DEX inventory:
 
-- `data/04_dex_registry.csv` — 18 distinct qualified protocol records.
+- `data/04_dex_registry.csv` — 20 qualified protocol identities; repeated provider labels without cross-chain identity evidence are separated by chain.
 - `data/05_dex_deployments.csv` — 25 chain-specific qualified deployments.
 - `data/06_dex_volume_snapshots.csv` — 82 independent volume snapshots.
 - `reports/research_reports/agent_03_dex_candidates.csv` — 70 below-threshold / unverified / unknown / conflict candidate rows.

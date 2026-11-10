@@ -39,7 +39,7 @@ Agent 02 status: COMPLETED. Seven networks retain stablecoin-discovery evidence 
 - [x] Keep below-threshold and unverified candidates in separate review/exclusion records.
 - [x] Publish protocol registry, qualified deployment registry, volume snapshots, candidate log, issue log, research report and Agent 03 handoff.
 
-Agent 03 status: COMPLETED. 18 qualified protocols; 25 qualified deployments; 82 volume snapshots; 70 non-qualified/unresolved candidates; 118 issue records. See `reports/research_reports/agent_03_dex_discovery.md`. Exact provider UTC window boundaries and several deployment identifiers remain UNKNOWN, documented for Agent 04.
+Agent 03 status: COMPLETED. 20 qualified protocol identities; 25 qualified deployments; 82 volume snapshots; 70 non-qualified/unresolved candidates; 118 issue records. See `reports/research_reports/agent_03_dex_discovery.md`. Exact provider UTC window boundaries and several deployment identifiers remain UNKNOWN, documented for Agent 04.
 
 Next task: `AGENT-04-DEX-TECHNICAL-DETAILS`. Do not expand the network scope.
 

@@ -56,7 +56,7 @@
 
 - Task `AGENT-03-DEX-DISCOVERY`: `COMPLETED` (2026-11-10T16:49:00Z).
 - Canonical scope: all 18 networks in `data/01_chains.txt`; no scope expansion.
-- Qualified registry: 18 protocols; 25 chain-specific deployments.
+- Qualified registry: 20 protocol identities; 25 chain-specific deployments.
 - Volume snapshots: 82; candidate rows: 70; issue rows: 118.
 - Candidate status counts: BELOW_THRESHOLD 46; UNVERIFIED_VOLUME 21; UNKNOWN 1; CONFLICT 2; INACTIVE 0.
 - One retrieval failure (Celestia) recorded without retry. Arbitrum Nova / Fraxtal / Zircuit use stale snapshots; Linea / OP Mainnet lack current per-DEX rows; Solana BisonFi / Meteora conflicts are excluded from main registry.
