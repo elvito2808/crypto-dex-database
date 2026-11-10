@@ -16,7 +16,7 @@
 - [x] Phase 3 — Stablecoins (Agent 02 COMPLETED; 30 deployment records; native/bridged/unknown separated).
 - [x] Phase 4 — DEX discovery (Agent 03 COMPLETED; see research report and issue log).
 - [x] Phase 5 — DEX technical details (Agent 04 COMPLETED; 20 protocols, 25 deployments, 150 fee records, 54 issues, 125 sources).
-- [x] Phase 6 — Verification and integration (Agent 05 COMPLETED; 793-row integrated database; 218 issues preserved OPEN_DEFERRED_FINAL).
+- [x] Phase 6 — Verification and integration (Agent 05 COMPLETED; 807-row integrated database; 232 issues preserved OPEN_DEFERRED_FINAL, including 14 Agent05 source-traceability issues).
 
 ## Agent 01 — final status
 
@@ -73,11 +73,21 @@
 ## Agent 05 — final status
 
 - Task `AGENT-05-VERIFICATION-AND-INTEGRATION`: `COMPLETED` (Phase 6 closed).
-- Canonical integrated database: 793 rows, 25 columns, 793 unique type-prefixed record IDs.
-- Consolidated issues: 218 rows (Agent 01: 14; Agent 02: 32; Agent 03: 118; Agent 04: 54), all `OPEN_DEFERRED_FINAL`.
-- Validation controls: 32; Data Dictionary supplemented with 82 missing field definitions (128 unique source-schema field names documented).
+- Canonical integrated database: 807 rows, 25 columns, 807 unique type-prefixed record IDs.
+- Consolidated issues: 232 rows (Agent01: 14; Agent02: 32; Agent03: 118; Agent04: 54; Agent05: 14), all `OPEN_DEFERRED_FINAL`.
+- Validation controls: 33; Data Dictionary supplemented with 82 missing field definitions (128 unique source-schema field names documented).
 - Source Registry audit: 125 unique IDs; 3 duplicate URL groups; 14 used HTTP(S) URLs absent from exact registry matching; 6 registry URLs not directly referenced.
 - Previously failed retrievals retained and not retried. No DEX discovery, volume refresh, requalification or unsupported verification upgrade was performed.
-- Deliverables: `data/final_crypto_dex_database.csv`, Agent 05 report, consolidated issues, validation results, instructions, progress and handoff.
+- Deliverables: `data/final_crypto_dex_database.csv` (807 rows), Agent 05 report, consolidated issues (232 rows), validation results (33 controls), instructions, progress and handoff.
 - Original Agent 01–04 data files, reports, issues and handoffs remain unchanged.
 - Remaining UNKNOWN, PROVISIONAL, CONFLICT and OPEN_DEFERRED_FINAL items are documented and do not block procedural closure.
+
+
+## Agent 05 bounded final correction — Source Registry traceability
+
+- 14 distinct exact URLs previously identified as used-but-unregistered were logged as new Agent05 issues `AG5-ISS-URL-0001` through `AG5-ISS-URL-0014`.
+- Agent05 issue category: `SOURCE_REGISTRY_TRACEABILITY_GAP`; affected field: `source_registry_exact_url_mapping`; review: `BOUNDED_REVIEW_ONLY`; status: `OPEN_DEFERRED_FINAL`.
+- Consolidated issue count: 232 (Agent01 14; Agent02 32; Agent03 118; Agent04 54; Agent05 14).
+- Integrated database: 807 rows, 25 columns, 807 unique `record_id` values.
+- Original 218 Agent01–04 issue records and original Agent01–04 source artifacts are unchanged. Source Registry remains unchanged.
+- SR-03 remains `OPEN_DEFERRED_FINAL` and explicitly references the 14 new issue IDs. No source was fetched or retried.
