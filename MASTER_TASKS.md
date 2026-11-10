@@ -53,14 +53,15 @@ Phase 4 / Agent 03 is closed. Its discovery decisions and deferred discovery/vol
 
 Dependency: Phase 4 qualifying DEX inventory.
 
-## Phase 6 — Verification and integration (CURRENT PHASE; Agent 05)
+## Phase 6 — Verification and integration (COMPLETED; Agent 05)
 
 Owner: `AGENT-05-VERIFICATION-AND-INTEGRATION` — Agent 05 is responsible for the independent verification and integration work below.
 
-- [ ] Deduplicate chains, assets, protocols and deployments.
-- [ ] Audit source quality, timestamps, identifiers and conflicts.
-- [ ] Validate CSV schemas, chain scope and referential integrity.
-- [ ] Publish canonical database and audit report.
+- [x] Deduplicate and integrate canonical chains, assets, protocols, deployments and source-linked records.
+- [x] Audit source quality, timestamps, identifiers, status boundaries and conflicts; document source URL registry gaps.
+- [x] Validate CSV schemas, canonical chain scope, volume threshold arithmetic and referential integrity.
+- [x] Preserve all 218 originating issues with explicit OPEN_DEFERRED_FINAL status where unresolved.
+- [x] Publish integrated database, validation results, consolidated issue register, audit report and Agent 05 handoff.
 
 Agent 04 handoff to Agent 05: keep all 54 records in `reports/research_reports/agent_04_retrieval_issues.csv` unresolved and available for Phase 6 review. Do not delete, downgrade or report them as resolved without independent evidence. Agent 04 remains `COMPLETED`; these are accepted open issues, not a reopened Agent 04 task.
 
@@ -81,3 +82,16 @@ Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deplo
 - Preserved Agent 04 final counts: 20 protocols, 25 deployments, 150 fee records, 54 unresolved issues and 125 Source Registry records.
 - All Phase 5 tasks above are complete. Remaining Agent 04 UNKNOWN/PROVISIONAL matters stay visible for Agent 05 in Phase 6.
 - Next active task: `AGENT-05-VERIFICATION-AND-INTEGRATION`.
+
+
+## Phase 6 / Agent 05 closeout
+
+- Task `AGENT-05-VERIFICATION-AND-INTEGRATION`: `COMPLETED`.
+- Integrated export: 793 data rows with 793 unique type-prefixed record IDs.
+- Issue consolidation: 218/218 original issues preserved (Agent 01 14; Agent 02 32; Agent 03 118; Agent 04 54). Unresolved records remain `OPEN_DEFERRED_FINAL`.
+- Canonical network scope remains the exact 18 VERIFIED Mainnets in `data/01_chains.txt`.
+- DEX inventory remains 20 protocol identities and 25 qualified deployments. No additional discovery, volume refresh or requalification was performed.
+- Fee categories remain six independent types with 25 records each; UNKNOWN and PROVISIONAL values remain.
+- Data Dictionary extended for all 128 unique source CSV fields and Agent 05 export schemas.
+- Source Registry issues (duplicate URLs, unregistered used URLs and unused entries) are disclosed in validation/report; no source was retried and no speculative registry entries were added.
+- Original Agent 01–04 artifacts remain unchanged. Phase 6 is closed; remaining evidence gaps are handed off for archival awareness, not as new discovery authorization.
