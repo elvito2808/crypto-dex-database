@@ -24,24 +24,26 @@
 - Final candidates: 28; VERIFIED 18, PROVISIONAL 8, CONFLICT 1, MISSING 0, DEPRECATED 1.
 - Active public VERIFIED Mainnets in `data/01_chains.txt`: 18.
 - Source registry at Agent 01 close: 72 entries; candidate matrix: 28 data rows.
-- Agent 01 unresolved cases remain in `reports/research_reports/agent_01_retrieval_issues.csv`. The file was not modified by Agent 02.
+- Agent 01 unresolved cases remain in `reports/research_reports/agent_01_retrieval_issues.csv`. Agent 02 did not modify this file.
 - Blast and Mantle were not researched or retried by Agent 02.
 
-## Agent 02 — token discovery
+## Agent 02 — final token discovery status
 
-- Task `AGENT-02-TOKEN-DISCOVERY`: closeout in progress pending GitHub read-back.
-- Scope: 18/18 canonical chains.
-- Chain-token CSV: 30 rows; 26 VERIFIED, 4 PROVISIONAL; includes 17 actual native assets, 1 protocol-fee token and 11 wrapped/bridged examples.
+- Task `AGENT-02-TOKEN-DISCOVERY`: `COMPLETED` (GitHub read-back verified).
+- Scope: all 18 canonical chains checked.
+- Chain-token CSV: 30 rows; 26 VERIFIED, 4 PROVISIONAL; 17 actual native assets, 1 contract-backed protocol fee token, 11 wrapped/bridged examples, plus a separate bridged ETH fee-candidate record.
 - Stablecoin CSV: 30 rows; 22 VERIFIED, 8 PROVISIONAL; NATIVE 14, BRIDGED 11, UNKNOWN representation 5.
+- Stablecoin deployments recorded on 11 chains; seven chain-level stablecoin inventory gaps are logged explicitly.
 - Source registry: 90 rows (72 existing + 18 Agent 02 additions).
-- Agent 02 issues: 32 documented evidence/UNKNOWN/inventory items; retrieval errors 0 observed.
-- The inventory is not an exhaustive token-contract census or liquidity audit; limitations are in the report and issue register.
+- Agent 02 issue register: 32 documented evidence/UNKNOWN/inventory issues; retrieval errors: 0 observed.
+- Read-back confirmed CSV rows/headers, scope, status counts, unique IDs and no repeated chain+contract/mint pairs.
+- This curated evidence inventory is not a full on-chain token census or liquidity audit.
 
 ## Next phase — Agent 03 DEX Discovery
 
 - [ ] Discover DEX protocols and distinct deployments on only the 18 canonical networks.
 - [ ] Qualify only 24-hour volume observations strictly greater than USD 50,000.
-- [ ] Record the provider/source, 24-hour volume, UTC observation timestamp, chain and deployment identity.
+- [ ] Record provider/source, 24-hour volume, UTC observation timestamp, chain and deployment identity.
 - [ ] Keep below-threshold and unverified candidates separately.
 
 ## Integrity rules
