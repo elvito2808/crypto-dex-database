@@ -28,7 +28,7 @@
 - MISSING: 0
 - DEPRECATED: 1
 - TXT records: 18
-- Official / first-party / maintained registry sources: 59
+- Official / first-party / maintained registry sources: 60
 - Independent sources: 11
 - Total source registry entries: 71
 
