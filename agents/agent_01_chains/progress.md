@@ -94,3 +94,14 @@
 - Cumulative reconciled counts: 28 candidates; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; TXT 18; retrieval issues 2; source registry 72 rows.
 - Batch 3 correction files: instructions, TXT header, metadata, source registry, report, candidate matrix, retrieval issue log, progress, handoff, project status.
 - Next: resolve Mantle's versioned architecture contradiction using already available evidence only unless a new distinct source is identified; close seven provisional candidate evidence gaps; continue L2 discovery. Never retry a failed source URL. Overall mission remains IN_PROGRESS.
+
+
+## Final closure — 2026-11-10T15:30:00Z
+- Agent task status: `COMPLETED` (finalization order; no further chain discovery authorized).
+- Final candidate records: 28; VERIFIED 18; PROVISIONAL 8; CONFLICT 1; MISSING 0; DEPRECATED 1.
+- Active public VERIFIED Mainnets in TXT: 18. TXT is unchanged; all uncertain and deprecated records remain excluded.
+- Retrieval issues: 2 independent Blast HTTP 502 failures. Total unresolved-case register: 14 rows (2 retrieval failures + 12 evidence/field issues).
+- Source registry: 72 entries; candidate matrix: 28 data rows.
+- All unresolved cases, including all eight PROVISIONAL networks, Mantle CONFLICT, UNKNOWN fields on retained records and Polygon zkEVM's historical UNKNOWN explorer field, are archived in `reports/research_reports/agent_01_retrieval_issues.csv`.
+- No external research or retry was performed during finalization.
+- Next project phase: identify Native Tokens, Wrapped Tokens and Stablecoins for the 18 VERIFIED networks. Unresolved chain-discovery cases are held for final project review, not immediate handoff.
