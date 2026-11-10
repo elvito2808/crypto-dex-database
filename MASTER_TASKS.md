@@ -81,7 +81,7 @@ Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deplo
 - Agent 04 status: `COMPLETED`.
 - Preserved Agent 04 final counts: 20 protocols, 25 deployments, 150 fee records, 54 unresolved issues and 125 Source Registry records.
 - All Phase 5 tasks above are complete. Remaining Agent 04 UNKNOWN/PROVISIONAL matters stay visible for Agent 05 in Phase 6.
-- Next active task: `AGENT-05-VERIFICATION-AND-INTEGRATION`.
+- Next active task: `NONE` — Agent 05 completed Phase 6; remaining evidence gaps are archived in the consolidated issue register.
 
 
 ## Phase 6 / Agent 05 closeout
