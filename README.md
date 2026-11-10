@@ -47,4 +47,12 @@ At every meaningful checkpoint, an agent must save its data, update its `progres
 
 ## Current phase
 
-Agent 01 — Chain Discovery: `COMPLETED`. Agent 02 — Token and Stablecoin Discovery: `COMPLETED`. Agent 03 — DEX Discovery: `COMPLETED`. Phase 5 — DEX Technical Details is complete (`AGENT-04-DEX-TECHNICAL-DETAILS = COMPLETED`). See `PROJECT_STATUS.md`, `reports/research_reports/agent_04_dex_technical_details.md` and `agents/agent_04_dex/handoff.md`.
+Agents 01–05 and Phase 6 are complete. The integrated output is `data/final_crypto_dex_database.csv` (793 rows); the full audit is `reports/research_reports/agent_05_verification_report.md`; 218 unresolved originating issues remain preserved in `reports/research_reports/agent_05_consolidated_issues.csv` with `OPEN_DEFERRED_FINAL` status. See `reports/research_reports/agent_05_validation_results.csv`, `PROJECT_STATUS.md`, `MASTER_TASKS.md` and `agents/agent_05_verification/handoff.md`.
+
+
+## Final integrated database
+
+- Canonical networks: 18 VERIFIED public production Mainnets.
+- Integrated export: `data/final_crypto_dex_database.csv` — 793 rows, original payloads and traceable identifiers.
+- Validation: `reports/research_reports/agent_05_validation_results.csv`.
+- Open issue archive: `reports/research_reports/agent_05_consolidated_issues.csv` — 218 originating issues retained; completion does not imply resolution.
