@@ -5,45 +5,52 @@
 - Status: `IN_PROGRESS`
 - Current phase: Phase 1 — Chain Discovery
 - Active task: `AGENT-01-CHAIN-DISCOVERY`
-- Last checkpoint: 2026-11-10T00:00:52Z
-- Current data status: 14 candidates examined/recorded; 10 VERIFIED, 2 PROVISIONAL, 1 MISSING, 1 DEPRECATED; 10 VERIFIED networks in TXT.
+- Last checkpoint UTC: 2026-11-10T00:06:50Z
+- Cumulative candidate records: 28; 18 VERIFIED, 8 PROVISIONAL, 1 CONFLICT, 0 MISSING, 1 DEPRECATED; 18 VERIFIED names in TXT.
 
 ## Completed
-- [x] Repository purpose, data principles and phase plan reviewed.
-- [x] Agent 01 instructions, methodology and schema reviewed.
-- [x] Batch 1: initial four evidence-backed network records saved.
-- [x] Batch 2: audited all four existing records and updated native fee asset evidence.
-- [x] Batch 2: added six verified L2s (Base, Linea, Mantle, Mode, OP Mainnet, Scroll).
-- [x] Batch 2: recorded Blast and Taiko as PROVISIONAL, Starknet as MISSING, Polygon zkEVM as DEPRECATED.
-- [x] All seven required outputs updated and saved to GitHub.
+- [x] Batch 1: initial four evidence-backed records saved.
+- [x] Batch 2: re-audited four initial records and added six verified L2 networks.
+- [x] Batch 3: direct evidence closure completed for OP Mainnet and Taiko.
+- [x] Batch 3: Starknet upgraded from MISSING to VERIFIED with current fee-token and runtime evidence.
+- [x] Batch 3: Mantle architecture discrepancy recorded as CONFLICT; excluded from TXT.
+- [x] Batch 3: Blast official documentation attempts and GitHub paths inspected; remains PROVISIONAL.
+- [x] Batch 3: seven additional L2 networks added as VERIFIED.
+- [x] Batch 3: seven additional L2 candidates retained as PROVISIONAL.
+- [x] Candidate matrix created with 28 cumulative candidate rows.
+- [x] All seven required existing outputs plus the new matrix saved and re-read from GitHub.
 
-## Current counts
-- Candidates examined: 14
-- Candidates recorded: 14
-- VERIFIED: 10
-- PROVISIONAL: 2
-- CONFLICT: 0
-- MISSING: 1
+## Cumulative counts
+- Unique candidates: 28
+- Distinct canonical candidates after deduplication: 28
+- VERIFIED: 18
+- PROVISIONAL: 8
+- CONFLICT: 1
+- MISSING: 0
 - DEPRECATED: 1
-- VERIFIED records in TXT: 10
-- Official sources: 19
-- Independent / non-official sources: 2
-- Total source registry entries: 21
+- VERIFIED records in TXT: 18
+- Official / first-party / maintained ecosystem registry sources: 59
+- Independent / non-official sources: 7
+- Total source registry entries: 66
 
-## Decisions
-1. The primary chain list contains only VERIFIED public production networks.
-2. Testnets, devnets, private/permissioned networks and deprecated networks are classified separately and excluded from the primary TXT list.
-3. A chain is not a separate network merely because it has a token, explorer, RPC endpoint or EVM chain ID.
-4. Unknown values remain UNKNOWN; no guesses are promoted.
-5. Celestia Mainnet Beta remains explicitly labelled experimental even though official docs describe it as live/stable.
-6. Polygon zkEVM is deprecated after the official 2026-07-03 sequencer sunset; excluded from TXT.
+## Key decisions
+1. TXT contains only VERIFIED active public production networks.
+2. Mantle is CONFLICT due to current-vs-archived official architecture discrepancy.
+3. Polygon zkEVM is DEPRECATED after official sequencer sunset on 2026-07-03.
+4. Blast remains PROVISIONAL because first-party docs could not be fetched and critical fields are only independently corroborated.
+5. Taiko and Starknet are now VERIFIED on current official technical documentation.
+6. Starknet's current protocol fee asset is STRK; ETH is recorded as a bridged token, not the current fee token.
+7. Testnets and devnets remain outside the primary TXT.
+8. Frameworks and ecosystems (OP Stack, ZKsync Elastic Network) are not themselves canonical network records.
 
 ## In progress
-- [ ] Close first-party evidence gaps for Blast, Taiko and Starknet.
-- [ ] Expand Ethereum L2 / rollup coverage and deduplicate candidates.
-- [ ] Continue EVM L1, non-EVM, sidechain, Cosmos/IBC, Substrate and appchain/subnet discovery.
-- [ ] Separately catalogue testnets/devnets, private networks, forks and deprecated networks.
-- [ ] Manager review of coverage, evidence, duplicates and status assignments.
+- [ ] Resolve Mantle architecture conflict.
+- [ ] Close Blast official evidence gap.
+- [ ] Close seven remaining PROVISIONAL L2 candidates.
+- [ ] Expand Ethereum L2 / Rollup candidate coverage and deduplicate further.
+- [ ] Continue Arbitrum Orbit, Validium/Volition and app-specific rollup discovery.
+- [ ] After L2 scope is further expanded, proceed to EVM L1 and remaining ecosystems.
+- [ ] Separately catalogue testnets/devnets, private networks, forks/renames and deprecated networks.
 
 ## Next action
-Resume from `agents/agent_01_chains/handoff.md`: verify Blast, Taiko and Starknet using first-party docs, then broaden L2/Rollup discovery before moving to EVM L1. Phase 1 and the overall mission are NOT complete.
+Resume from `agents/agent_01_chains/handoff.md`. Resolve Mantle and Blast first, then close the seven provisional candidates and broaden L2 discovery. Do not mark Phase 1 or the overall mission complete.
