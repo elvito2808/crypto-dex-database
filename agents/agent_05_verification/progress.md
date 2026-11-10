@@ -32,7 +32,7 @@ Each new file was read back from GitHub after creation and compared with the sub
 | Validation results | `3c790cc4373c4891295b6806275b7950b46f1960` | `65e4f3cbc5b37f726f78dfd991c3ac945c8832ff` |
 | Verification report | `6a7fd333ac4e456ec3eb2f169d54193ea81a2333` | `246cec9c35b4d9df6151ed06783789c149ceba4f` |
 | Instructions | `b27572835ca0655898b264b47ad049464859510c` | `0e2b19c91017df2aa7b7538f421706b3cc2f2813` |
-| Project Status | `eb5d7587a3d3a58ae9114d5e6e36f752b06fff78` | `42508f63d2c62c3664304c199c26709e4c6fc1bb` |
+| Project Status | `3be53500d244fedbe676227532af35db552e34cc` | `203d8a614fc176c35fac44c561abb58d0f2d0eb2` |
 | Master Tasks | `d8d2ff4717a0eb39a41a0dda102847c333a68d49` | `8ba797f8dd63a41ca4f5e6a688db73de68f29e06` |
 | README | `35c82292dc87520544b5c6d0cdb2cdb97f154e0e` | `a8c0878fa360a9bfd76f151b06805b1812dd8ac2` |
 
