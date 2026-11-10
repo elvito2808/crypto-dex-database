@@ -1,4 +1,5 @@
-# VERIFIED public production networks only.
+# VERIFIED active public production Mainnets only; no test/dev/private/experimental/deprecated networks.
+# Current count: 18 canonical networks. Candidates with unresolved evidence are excluded.
 # One canonical network name per line; alphabetically sorted.
 # Excludes testnets, private networks, deprecated networks and all non-VERIFIED candidates.
 Abstract
