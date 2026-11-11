@@ -40,7 +40,7 @@ Issue origins: Agent01 14; Agent02 32; Agent03 118; Agent04 54; Agent05 14; Post
 - PASS — integrated database has 808 data rows and 25 columns; `record_id` values are unique (808/808).
 - PASS — integrated database contains 233 `AGENT_ISSUE` rows; the new issue occurs exactly once with `OPEN_DEFERRED_FINAL`.
 - PASS — all 232 pre-existing consolidated issue CSV records and all 807 pre-existing integrated database records are byte-identical at the raw record-line level to the baseline snapshot.
-- PASS — all six non-target evidence/source files from the bounded review retained their baseline blob SHAs: `data/01_chains.txt`, `data/01_chains_metadata.csv`, `agents/agent_01_chains/instructions.md`, `agents/agent_01_chains/handoff.md`, and `reports/research_reports/agent_01_retrieval_issues.csv` (five files; the sixth reviewed record is the integrated database, which received only the appended issue row).
+- PASS — all five untouched source/evidence files retained their baseline blob SHAs: `data/01_chains.txt`, `data/01_chains_metadata.csv`, `agents/agent_01_chains/instructions.md`, `agents/agent_01_chains/handoff.md`, and `reports/research_reports/agent_01_retrieval_issues.csv`. The two other reviewed CSVs received only the single appended issue row each; all pre-existing records in them were preserved byte-for-byte.
 - PASS — Celestia remains present in the unchanged 18-entry canonical list; metadata retains its experimental wording and VERIFIED metadata status; the integrated Celestia chain record is unchanged.
 - PASS — existing `ISS-000010` remains unchanged and is not repurposed.
 - PASS — no original Agent01–Agent05 research source files or original issue records were modified.
