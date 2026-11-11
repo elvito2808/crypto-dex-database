@@ -91,3 +91,21 @@
 - Integrated database: 807 rows, 25 columns, 807 unique `record_id` values.
 - Original 218 Agent01–04 issue records and original Agent01–04 source artifacts are unchanged. Source Registry remains unchanged.
 - SR-03 remains `OPEN_DEFERRED_FINAL` and explicitly references the 14 new issue IDs. No source was fetched or retried.
+
+## Final project closeout — 2026-11-11
+
+- Overall project status: COMPLETED; repository closeout and post-closeout integration are recorded on main.
+- Final main HEAD: d6e4610883af194be1386891d378cb3c364ee9f2 (GitHub normal merge commit for PR #2).
+- PR #2 integrated the accepted amendment head cb7d89eb96098ad4bc2790f80e7ae1f865360e36; the resulting main ref compares identical to the merge commit (0 ahead, 0 behind).
+- The merge changed exactly the three intended amendment paths: reports/research_reports/agent_05_consolidated_issues.csv, data/final_crypto_dex_database.csv, and reports/research_reports/post_closeout_qa_amendment_celestia.md.
+- Final consolidated issue register: 233 data rows, 19 columns. Final integrated database: 808 data rows, 25 columns, including 233 AGENT_ISSUE records.
+- POSTCLOSEOUT-CELESTIA-001 occurs exactly once in each register and remains OPEN_DEFERRED_FINAL.
+- Canonical network list remains unchanged at 18 entries. Celestia remains present and has not been removed or reclassified.
+- All 232 historical issue records and 807 historical integrated records were preserved byte-for-byte by the accepted amendment. No Agent01–Agent05 source research artifacts were reopened or modified.
+- The Celestia canonical-membership versus experimental-exclusion policy conflict remains explicitly unresolved/deferred. Project completion denotes completion of scoped research, integration, validation and archival of unresolved items; it does not imply that every issue was resolved.
+- No further discovery, source retrieval, retry, volume refresh, or reclassification is authorized by this closeout.
+- Read-back blob SHAs: consolidated issues 874142bc695f96addb34a9e5faa9f12f5f715fe9; integrated database a9ff48abafb8892b51aca5a438f6fbb8753c9728; amendment report 521268139794c3e9151f70a520fc7e8f62619d4e.
+- PR: https://github.com/elvito2808/crypto-dex-database/pull/2
+- Merge commit: https://github.com/elvito2808/crypto-dex-database/commit/d6e4610883af194be1386891d378cb3c364ee9f2
+
+This final closeout section supersedes earlier historical row counts and pre-amendment checkpoint references in this file.
