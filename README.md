@@ -65,3 +65,18 @@ Agents 01–05 and Phase 6 are complete. The integrated output is `data/final_cr
 - Agent05 has logged the 14 existing used-but-unregistered URLs as `AG5-ISS-URL-0001` through `AG5-ISS-URL-0014`, each `SOURCE_REGISTRY_TRACEABILITY_GAP` and `OPEN_DEFERRED_FINAL`.
 - Validation Results contains 33 controls; SR-03 explicitly references these 14 issues and remains `OPEN_DEFERRED_FINAL`.
 - The original 218 Agent01–04 issues and `sources/source_registry.csv` are unchanged. No source was retrieved or retried.
+
+## Final project closeout — 2026-11-11
+
+Final repository state supersedes the earlier pre-amendment counts above.
+
+- **Project status:** COMPLETED; all scoped phases and final repository integration are closed.
+- **Final integrated database:** data/final_crypto_dex_database.csv — 808 data rows, 25 columns, including 233 AGENT_ISSUE records.
+- **Consolidated issue archive:** reports/research_reports/agent_05_consolidated_issues.csv — 233 issue rows, 19 columns.
+- **Final post-closeout issue:** POSTCLOSEOUT-CELESTIA-001, recorded once in each register as OPEN_DEFERRED_FINAL.
+- **Canonical scope:** unchanged at 18 entries. Celestia remains present and has not been reclassified.
+- **Preservation:** all 232 historical issues, 807 historical integrated records, and original Agent01–Agent05 research artifacts were preserved.
+- **Celestia policy conflict:** explicitly documented and deferred; completion does not mean this conflict or other archived issues have been resolved.
+- **Final main HEAD:** d6e4610883af194be1386891d378cb3c364ee9f2, merged via PR #2 (https://github.com/elvito2808/crypto-dex-database/pull/2).
+
+See PROJECT_STATUS.md, MASTER_TASKS.md, and reports/research_reports/post_closeout_qa_amendment_celestia.md for the final status and audit trail.
