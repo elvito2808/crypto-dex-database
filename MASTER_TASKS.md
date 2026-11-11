@@ -106,3 +106,15 @@ Agent 04 status: `COMPLETED`. All 20 registered protocol identities and 25 deplo
 - [x] Update SR-03 to reference all 14 new issues while retaining `OPEN_DEFERRED_FINAL`.
 - [x] Synchronize the report, progress, handoff, validation register, project status and README.
 - [x] Keep `sources/source_registry.csv` unchanged; perform no source fetch, retry or speculative URL registration.
+
+## Final repository closeout — 2026-11-11
+
+- [x] Integrate accepted post-closeout Celestia QA amendment into main through PR #2 using a normal merge commit.
+- [x] Verify final main HEAD equals merge commit d6e4610883af194be1386891d378cb3c364ee9f2 (identical ref; zero ahead/behind).
+- [x] Verify merge scope is exactly the three intended amendment files, with no unrelated paths changed.
+- [x] Read back final consolidated issue register (233 rows, 19 columns) and integrated database (808 rows, 25 columns; 233 issue records).
+- [x] Verify POSTCLOSEOUT-CELESTIA-001 appears once in each register with OPEN_DEFERRED_FINAL.
+- [x] Preserve all 232 prior issue records, 807 prior integrated records, the exact 18-entry canonical list, and original Agent01–Agent05 research artifacts.
+- [x] Record the Celestia canonical-scope policy contradiction as unresolved/deferred; make no reclassification or canonical-list change.
+
+**Final disposition:** Project COMPLETED. All scoped phases, integration, validation, and repository closeout are complete. Open/deferred issues remain archived and do not block procedural completion. No additional research, retry, refresh, or data changes are part of this closeout.
